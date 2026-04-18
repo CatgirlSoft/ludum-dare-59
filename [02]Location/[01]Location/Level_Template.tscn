@@ -1,0 +1,199 @@
+[gd_scene load_steps=11 format=3 uid="uid://bp16nh4e1u7rh"]
+
+[ext_resource type="Texture2D" uid="uid://df4hy2oy11l46" path="res://[05]Assets/image.png" id="1_82n5y"]
+[ext_resource type="Texture2D" uid="uid://dm0cbnswnon00" path="res://[05]Assets/VSlider_button.png" id="2_306j3"]
+[ext_resource type="Texture2D" uid="uid://cdu5nl5k0oxfp" path="res://[05]Assets/HSlider_button.png" id="3_306j3"]
+[ext_resource type="Texture2D" uid="uid://c3x67pkseytbp" path="res://[05]Assets/VTick.png" id="3_ptfii"]
+[ext_resource type="Texture2D" uid="uid://cnb4gyvafsfni" path="res://[05]Assets/HTick.png" id="4_ebe6o"]
+[ext_resource type="Texture2D" uid="uid://dt0qwnv55w3ul" path="res://[05]Assets/Left_arrow.png" id="4_rlgnu"]
+[ext_resource type="Texture2D" uid="uid://lwvoebyp7yui" path="res://[05]Assets/Left_arrow_pressed.png" id="5_2onyg"]
+[ext_resource type="Texture2D" uid="uid://c4nv0q02xomf5" path="res://[05]Assets/Right_arrow.png" id="6_83yxr"]
+[ext_resource type="Texture2D" uid="uid://d23qku0vb5gfo" path="res://[05]Assets/Right_arrow_pressed.png" id="7_ebe6o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xsrc3"]
+
+[node name="LevelTemplate" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Image" type="Sprite2D" parent="."]
+position = Vector2(239.46582, 134.18752)
+scale = Vector2(0.32920328, 0.32920325)
+texture = ExtResource("1_82n5y")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xsrc3")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Radio_Top" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.21
+
+[node name="Left_Screen" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Screen_Separation" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.35
+
+[node name="LED" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="Wave_Selector" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Left_Button" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/Wave_Selector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Left_Button2" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/Wave_Selector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Right_Screen" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Radio_Bottom" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Radio_Control" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.28
+
+[node name="Amplitude_Slider" type="VSlider" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+theme_override_icons/grabber = ExtResource("2_306j3")
+theme_override_icons/grabber_highlight = ExtResource("2_306j3")
+theme_override_icons/tick = ExtResource("3_ptfii")
+max_value = 18.0
+value = 9.0
+scrollable = false
+tick_count = 10
+ticks_on_borders = true
+ticks_position = 2
+
+[node name="Midle_Control" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Phase_Slider" type="HSlider" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+theme_override_icons/grabber = ExtResource("3_306j3")
+theme_override_icons/grabber_highlight = ExtResource("3_306j3")
+theme_override_icons/tick = ExtResource("4_ebe6o")
+max_value = 18.0
+value = 9.0
+tick_count = 10
+ticks_on_borders = true
+ticks_position = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="Panel" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer"]
+custom_minimum_size = Vector2(22, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("4_rlgnu")
+texture_pressed = ExtResource("5_2onyg")
+
+[node name="Panel2" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer"]
+custom_minimum_size = Vector2(22, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel3" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer"]
+custom_minimum_size = Vector2(22, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("6_83yxr")
+texture_pressed = ExtResource("7_ebe6o")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+
+[node name="frequency" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Wave_Selected" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.65
+
+[node name="Start_&_Stop" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.65
+toggle_mode = true
+
+[node name="Info_Vbox" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.48
+
+[node name="Clock" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Info_Vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Speaker" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Info_Vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Dialogue_Box" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.28
