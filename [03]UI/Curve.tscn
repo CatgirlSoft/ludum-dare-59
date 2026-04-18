@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq0xbvk3ghk1s"]
+
+[ext_resource type="Script" uid="uid://m50kc5008vmr" path="res://[03]UI/curve.gd" id="1_jfjhl"]
+
+[node name="Curve" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jfjhl")
+
+[node name="Amplitude" type="VSlider" parent="."]
+layout_mode = 0
+offset_left = -567.0
+offset_top = -316.0
+offset_right = -551.0
+offset_bottom = 195.0
+step = 0.1
+value = 100.0
+tick_count = 100
+
+[node name="Phase" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = -561.0
+offset_top = 206.0
+offset_right = -104.0
+offset_bottom = 222.0
+max_value = 10.0
+step = 0.01
+
+[node name="Frequency" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = -60.0
+offset_top = 207.0
+offset_right = 351.0
+offset_bottom = 223.0
+max_value = 2.0
+step = 0.01
+value = 0.1
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = -557.0
+offset_top = 245.0
+offset_right = -368.0
+offset_bottom = 277.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="value_changed" from="Amplitude" to="." method="_on_amplitude_value_changed"]
+[connection signal="value_changed" from="Phase" to="." method="_on_phase_value_changed"]
+[connection signal="value_changed" from="Frequency" to="." method="_on_frequency_value_changed"]
+[connection signal="item_selected" from="OptionButton" to="." method="_on_option_button_item_selected"]

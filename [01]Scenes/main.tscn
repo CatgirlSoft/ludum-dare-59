@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://1kqq5pqs6tk6"]
+
+[ext_resource type="PackedScene" uid="uid://bq0xbvk3ghk1s" path="res://[03]UI/Curve.tscn" id="1_i4hby"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Curve" parent="." instance=ExtResource("1_i4hby")]
+offset_left = 583.0
+offset_top = 349.0
+offset_right = 583.0
+offset_bottom = 349.0
