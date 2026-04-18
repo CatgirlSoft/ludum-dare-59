@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://byfnl1k326qeh"]
+
+[ext_resource type="Script" uid="uid://dn0gxvt7jbcp7" path="res://[06]Common/MusicManager/music_manager.gd" id="1_w2agd"]
+
+[node name="MusicManager" type="Node"]
+script = ExtResource("1_w2agd")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

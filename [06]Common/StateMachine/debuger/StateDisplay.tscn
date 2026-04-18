@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs0rml8wdp21i"]
+
+[ext_resource type="Script" uid="uid://038qt757kley" path="res://[06]Common/StateMachine/debuger/state_display.gd" id="1_masct"]
+
+[node name="DisplayState" type="Label"]
+offset_left = -20.0
+offset_top = -58.0
+offset_right = 20.0
+offset_bottom = -35.0
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_masct")
+state_prefix = "Player"
