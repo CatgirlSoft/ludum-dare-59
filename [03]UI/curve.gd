@@ -10,7 +10,7 @@ extends Control
 @onready var layer_label: Label = $Label2
 @onready var combine_op_button: Button = $Button3
 
-@export var number_of_layers: int = 1
+@export var number_of_layers: int = 2
 
 @export var target_offset_x: float = 0.0
 @export var target_offset_y: float = 0.0
@@ -100,13 +100,13 @@ func _draw() -> void:
 		draw_line(
 			Vector2((x_size * i) - (x_size * player_offset_x), samples[i] + player_offset_y),
 			Vector2((x_size * (i + 1) - (x_size * player_offset_x)), samples[i + 1] + player_offset_y),
-			Color.ALICE_BLUE, 1, true
+			Color.ALICE_BLUE, 3, true
 		)
 	for i in range(target.size() - 1):
 		draw_line(
 			Vector2(x_size * i - (x_size * target_offset_x), target[i] + target_offset_y),
 			Vector2(x_size * (i + 1) - (x_size * target_offset_x), target[i + 1] + target_offset_y),
-			Color.ALICE_BLUE, 1, true
+			Color.ALICE_BLUE, 3, true
 		)
 
 func compare(a: Array, b: Array) -> float:
@@ -236,16 +236,23 @@ func _save_from_ui() -> void:
 		"wave_type": WaveType[WaveType.find_key(option_button.get_item_id(option_button.selected))]
 	}
 
+#func score() -> float:
+	#var wave_score = 0.0
+	#if wave_type == target_wave_type:
+		#wave_score = 40.0
+	#var amplitude_score = 20.0 * _proximity(amplitude, target_amplitude, 100.0)
+	#var frequency_score = 30.0 * _proximity(frequency, target_frequency, 2.0)
+	#var phase_score = 10.0 * _proximity(phase, target_phase, 10.0)
+	#var percentage = wave_score + amplitude_score + frequency_score + phase_score
+	#percentage_label.text = str(percentage).pad_decimals(2) + "%"
+	#return percentage
+
 func score() -> float:
-	var wave_score = 0.0
-	if wave_type == target_wave_type:
-		wave_score = 40.0
-	var amplitude_score = 20.0 * _proximity(amplitude, target_amplitude, 100.0)
-	var frequency_score = 30.0 * _proximity(frequency, target_frequency, 2.0)
-	var phase_score = 10.0 * _proximity(phase, target_phase, 10.0)
-	var percentage = wave_score + amplitude_score + frequency_score + phase_score
-	percentage_label.text = str(percentage).pad_decimals(2) + "%"
-	return percentage
+	var mse = compare(samples, target)
+	var percent = clampf(100.0 * (1.0 - mse / 10000.0), 0.0, 100.0)
+	percentage_label.text = str(percent).pad_decimals(2) + "%"
+	return percent
+
 
 @warning_ignore("shadowed_variable")
 func _proximity(value: float, target: float, max_range: float) -> float:
@@ -255,7 +262,8 @@ func _proximity(value: float, target: float, max_range: float) -> float:
 
 func _refresh() -> void:
 	samples = _evaluate_layers(player_layers, player_ops, number_of_samples)
-	#print(score())
+	score()
+	print(score())
 	queue_redraw()
 
 func _on_amplitude_value_changed(value: float) -> void:

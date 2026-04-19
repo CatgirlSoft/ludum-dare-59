@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bq0xbvk3ghk1s"]
+[gd_scene load_steps=3 format=3 uid="uid://bq0xbvk3ghk1s"]
 
 [ext_resource type="Script" uid="uid://m50kc5008vmr" path="res://[03]UI/curve.gd" id="1_jfjhl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jfjhl"]
+font_size = 48
 
 [node name="Curve" type="Control"]
 layout_mode = 3
@@ -48,6 +51,7 @@ offset_right = -358.0
 offset_bottom = 292.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.25, 0.25)
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -76,10 +80,11 @@ text = "bouton 3
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 416.0
-offset_top = 250.0
-offset_right = 549.0
-offset_bottom = 309.0
+offset_left = 149.0
+offset_top = 237.0
+offset_right = 591.0
+offset_bottom = 520.0
+label_settings = SubResource("LabelSettings_jfjhl")
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
