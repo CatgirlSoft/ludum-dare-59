@@ -1,9 +1,20 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://ca3bhr5g535io"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://ca3bhr5g535io"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ujmkq"]
+bg_color = Color(0.39969334, 0.62, 0.2976, 1)
+border_width_bottom = 5
+border_color = Color(0.20872499, 0.55, 0.1485, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jngh1"]
-bg_color = Color(0.6549911, 0.83991987, 0.23378101, 1)
+bg_color = Color(0.20784314, 0.54901963, 0.14901961, 1)
 border_width_bottom = 10
-border_color = Color(0.47398907, 0.61012566, 0.1672608, 1)
+border_color = Color(0.1502432, 0.40962335, 0.105856605, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 4
@@ -12,16 +23,22 @@ shadow_size = 4
 shadow_offset = Vector2(4, 4)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ogf5"]
-bg_color = Color(0.654902, 0.8392157, 0.23529412, 1)
+bg_color = Color(0.44437, 0.74, 0.3626, 1)
 border_width_bottom = 10
-border_color = Color(0.4745098, 0.6117647, 0.16862746, 1)
+border_color = Color(0.20872499, 0.55, 0.1485, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
 
 [resource]
 Button/colors/font_color = Color(0.05882353, 0.05882353, 0.2627451, 1)
 Button/colors/font_focus_color = Color(0.8818128, 0.5494728, 1.92523e-07, 1)
 Button/colors/font_hover_color = Color(0.88235295, 0.54901963, 0, 1)
 Button/colors/font_pressed_color = Color(0, 0, 0, 1)
-Button/styles/focus = SubResource("StyleBoxFlat_jngh1")
-Button/styles/hover = SubResource("StyleBoxFlat_6ogf5")
-Button/styles/normal = SubResource("StyleBoxFlat_jngh1")
+Button/styles/focus = SubResource("StyleBoxFlat_ujmkq")
+Button/styles/hover = SubResource("StyleBoxFlat_jngh1")
+Button/styles/normal = SubResource("StyleBoxFlat_6ogf5")
 Label/colors/font_color = Color(0.05882353, 0.05882353, 0.2627451, 1)
