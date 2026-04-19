@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ludumdare-project"
-run/main_scene="uid://bq0xbvk3ghk1s"
+run/main_scene="uid://bd3l71r52vs8h"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -1,8 +1,9 @@
 extends Control
 
+@onready var game = preload("uid://bp16nh4e1u7rh")
 
 func _on_play_pressed() -> void:
-	#get_tree().change_scene_to_file()
+	get_tree().change_scene_to_packed(game)
 	pass
 
 

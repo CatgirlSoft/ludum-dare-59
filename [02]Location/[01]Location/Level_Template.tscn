@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=3 uid="uid://bp16nh4e1u7rh"]
 
-[ext_resource type="Texture2D" uid="uid://df4hy2oy11l46" path="res://[05]Assets/image.png" id="1_82n5y"]
+[ext_resource type="Script" uid="uid://6eup5vgsmqxd" path="res://[02]Location/[01]Location/level_template.gd" id="1_kuh44"]
 [ext_resource type="Texture2D" uid="uid://dm0cbnswnon00" path="res://[05]Assets/VSlider_button.png" id="2_306j3"]
 [ext_resource type="Shader" uid="uid://dxsyctgg0oa50" path="res://[03]UI/wave.gdshader" id="2_kuh44"]
 [ext_resource type="Texture2D" uid="uid://cdu5nl5k0oxfp" path="res://[05]Assets/HSlider_button.png" id="3_306j3"]
@@ -61,12 +61,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Image" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(239.46582, 134.18752)
-scale = Vector2(0.32920328, 0.32920325)
-texture = ExtResource("1_82n5y")
+script = ExtResource("1_kuh44")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -347,24 +342,14 @@ square_image = ExtResource("18_kuh44")
 saw_image = ExtResource("19_bnsis")
 triangle_image = ExtResource("20_eet3d")
 
-[node name="Phase_Slider2" type="HSlider" parent="."]
-layout_mode = 0
-offset_left = 36.0
-offset_top = 568.0
-offset_right = 280.0
-offset_bottom = 622.0
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.3
-theme_override_constants/tick_offset = 10
-theme_override_icons/grabber = ExtResource("3_306j3")
-theme_override_icons/grabber_highlight = ExtResource("3_306j3")
-theme_override_icons/tick = ExtResource("4_ebe6o")
-theme_override_styles/slider = SubResource("StyleBoxFlat_2om8t")
-theme_override_styles/grabber_area = SubResource("StyleBoxFlat_1qimg")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_xquba")
-max_value = 2.0
-step = 0.01
-value = 2.0
-tick_count = 10
-ticks_on_borders = true
-ticks_position = 2
+[node name="Total_Timer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+
+[node name="Last_Input_Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="layer_changed" from="Curve" to="." method="_on_curve_layer_changed"]
+[connection signal="score_changed" from="Curve" to="." method="_on_curve_score_changed"]
+[connection signal="timeout" from="Total_Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Last_Input_Timer" to="." method="_on_last_input_timer_timeout"]

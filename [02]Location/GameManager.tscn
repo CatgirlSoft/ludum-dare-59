@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://47fdphpkgbt5"]
+
+[ext_resource type="PackedScene" uid="uid://bp16nh4e1u7rh" path="res://[02]Location/[01]Location/Level_Template.tscn" id="1_pmxsh"]
+
+[node name="GameManager" type="Node"]
+
+[node name="LevelTemplate" parent="." instance=ExtResource("1_pmxsh")]

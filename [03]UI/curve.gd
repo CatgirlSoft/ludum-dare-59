@@ -1,3 +1,4 @@
+class_name Curve_Class
 extends Control
 
 @onready var curve: Control = $"."
@@ -35,7 +36,7 @@ extends Control
 
 
 @export_group("Value")
-@export var number_of_layers: int = 2
+@export var number_of_layers: int = 1
 
 @export var number_of_samples: int = 10
 
@@ -93,6 +94,9 @@ func _ready() -> void:
 
 	target = generate_random_combined(number_of_layers, number_of_samples)
 
+	recalculate_player_layers()
+
+func recalculate_player_layers():
 	player_layers = []
 	player_ops = []
 	for i in range(target_layers.size()):
@@ -100,6 +104,7 @@ func _ready() -> void:
 	for i in range(target_layers.size() - 1):
 		player_ops.append(CombineOp.ADD)
 	current_layer_index = 0
+	layer_changed.emit(current_layer_index)
 	_update_ui()
 
 func sine_wave(x: float) -> float:
@@ -265,7 +270,9 @@ func _update_ui() -> void:
 	amplitude_slider.value = layer.amplitude
 	frequency_slider.value = layer.frequency
 	phase_slider.value = layer.phase
+	_update_wave_texture(player_layers[current_layer_index].wave_type)
 	_update_combine_op_button()
+	
 
 func _update_combine_op_button() -> void:
 	if current_layer_index < player_ops.size():
