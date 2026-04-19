@@ -277,6 +277,10 @@ next_layer_button = NodePath("../MarginContainer/Panel/MarginContainer/VBoxConta
 previous_wave_type = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer/Panel")
 next_wave_type = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer/Panel3")
 curve_addition_type = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/Start_&_Stop")
+target_offset_x = -110.0
+target_offset_y = -35.0
+player_offset_x = -8.0
+player_offset_y = 170.0
 
 [node name="Phase_Slider2" type="HSlider" parent="."]
 layout_mode = 0
