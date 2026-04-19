@@ -131,37 +131,46 @@ func wave(x: float, type: WaveType = WaveType.SINE) -> float:
 			return triangle_wave(x)
 	return 0.0
 
-func _draw() -> void:
-	pass
-	#var left_screen_center = left_screen.global_position + left_screen.size / 2
-	#var left_screen_width = left_screen.size.x
-	#var right_screen_center = right_screen.global_position + right_screen.size / 2
-	#var right_screen_width = right_screen.size.x
-#
-	#var samples_count = samples.size()
-	#var target_count = target.size()
-	#for i in range(samples_count - 1):
-		#var x0 = left_screen_center.x + (float(i) / (samples_count - 1) - 0.5) * left_screen_width
-		#var x1 = left_screen_center.x + (float(i + 1) / (samples_count - 1) - 0.5) * left_screen_width
-		#draw_line(
-			#Vector2(x0, left_screen_center.y + samples[i]),
-			#Vector2(x1, left_screen_center.y + samples[i + 1]),
-			#Color.ALICE_BLUE, 3, true)
-	#for i in range(target_count - 1):
-		#var x0 = right_screen_center.x + (float(i) / (target_count - 1) - 0.5) * right_screen_width
-		#var x1 = right_screen_center.x + (float(i + 1) / (target_count - 1) - 0.5) * right_screen_width
-		#draw_line(
-			#Vector2(x0, right_screen_center.y + target[i]),
-			#Vector2(x1, right_screen_center.y + target[i + 1]),
-			#Color.ALICE_BLUE, 3, true)
-
 func compare(a: Array, b: Array) -> float:
+	#var min_size = mini(a.size(), b.size())
+	#var sum = 0.0
+	#for i in  range(min_size):
+		#var diff = a[i] - b[i]
+		#sum += diff * diff
+	#return sum / min_size
 	var min_size = mini(a.size(), b.size())
-	var sum = 0.0
-	for i in  range(min_size):
-		var diff = a[i] - b[i]
-		sum += diff * diff
-	return sum / min_size
+	if min_size == 0:
+		return 0.0
+
+	var mean_a := 0.0
+	var mean_b := 0.0
+	for i in range(min_size):
+		mean_a += a[i]
+		mean_b += b[i]
+	mean_a /= min_size
+	mean_b /= min_size
+	
+	var num := 0.0
+	var den_a := 0.0
+	var den_b := 0.0
+	for i in range(min_size):
+		var da = a[i] - mean_a
+		var db = b[i] - mean_b
+		num += da * db
+		den_a += da * da
+		den_b += db * db
+	
+	var correlation := 0.0
+	if den_a > 0.0 and den_b > 0.0:
+		correlation = num / sqrt(den_a * den_b)
+
+	var rms_a := sqrt(den_a / min_size)
+	var rms_b := sqrt(den_b / min_size)
+	var amp_penalty := 1.0
+	if rms_b > 0.0:
+		var ratio = rms_a / rms_b
+		amp_penalty = 1.0 - clampf(abs(ratio - 1.0), 0.0, 1.0)
+	return clampf((correlation * 0.7 + amp_penalty * 0.3), 0.0, 1.0)
 
 func combine(a: Array, b: Array, op: CombineOp) -> Array:
 	var result = []
@@ -290,8 +299,8 @@ func _save_from_ui() -> void:
 	}
 
 func score() -> float:
-	var mse = compare(samples, target)
-	var percent = clampf(100.0 * (1.0 - mse / 10000.0), 0.0, 100.0)
+	var similarity = compare(samples, target)
+	var percent = similarity * 100.0
 	percentage_label.text = str(percent).pad_decimals(2) + "%"
 	return percent
 
