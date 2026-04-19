@@ -30,7 +30,7 @@ func _process(_delta: float) -> void:
 		current_score = 0
 		level += 1
 
-		if level % 2 == 0:
+		if level % 10 == 0:
 			curve.target = curve.generate_random_combined(2,10)
 		else:
 			curve.target = curve.generate_random_combined(1,10)
@@ -59,10 +59,13 @@ func _on_last_input_timer_timeout() -> void:
 
 #TODO
 # Timer
+# Timer run out
+#
 # Score led
 # 
 # FInish UI 
 #
 # SOUND
+# Button
 # static sound
 # decoded message clear sound
