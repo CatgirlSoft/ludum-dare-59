@@ -3,13 +3,27 @@ extends Control
 @onready var curve: Control = $"."
 @onready var option_button: OptionButton = $OptionButton
 
-@onready var amplitude_slider: VSlider = $Amplitude
-@onready var phase_slider: HSlider = $Phase
-@onready var frequency_slider: HSlider = $Frequency
 @onready var percentage_label: Label = $Label
 @onready var layer_label: Label = $Label2
 @onready var combine_op_button: Button = $Button3
 
+@export_group("Node_reference")
+@export var amplitude_slider: VSlider
+
+@export var phase_slider: HSlider
+
+@export var frequency_slider: HSlider
+
+@export var previous_layer_button: Button
+@export var next_layer_button: Button
+
+@export var previous_wave_type: TextureButton
+@export var next_wave_type: TextureButton
+
+@export var curve_addition_type: TextureButton
+
+
+@export_group("Value")
 @export var number_of_layers: int = 2
 
 @export var target_offset_x: float = 0.0
@@ -29,8 +43,8 @@ var target_frequency: float
 var target_phase: float
 var target_wave_type: WaveType
 
-@export var x_size = 5
-@export var step = 0.1
+var x_size = 5
+var step = 0.1
 
 var samples = []
 var target = []
@@ -56,6 +70,21 @@ enum CombineOp {
 }
 
 func _ready() -> void:
+	if amplitude_slider: amplitude_slider.connect("value_changed",_on_amplitude_value_changed)
+	if phase_slider: phase_slider.connect("value_changed",_on_phase_value_changed)
+	if frequency_slider: frequency_slider.connect("value_changed",_on_frequency_value_changed)
+	
+	if previous_layer_button: previous_layer_button.connect("pressed",_on_previous_layer)
+	if next_layer_button: next_layer_button.connect("pressed",_on_next_layer)
+	
+	if previous_wave_type: previous_wave_type.connect("pressed",_on_previous_curve_pressed)
+	if next_wave_type: next_wave_type.connect("pressed",_on_next_curve_pressed)
+	
+	if curve_addition_type: curve_addition_type.connect("pressed",_on_toggle_op)
+
+	x_size = 5
+	step = 0.1
+	
 	for en in WaveType.keys():
 		option_button.add_item(en, WaveType[en])
 	option_button.select(0)
@@ -156,9 +185,13 @@ func generate_random_combined(num_layers: int, number_samples: int) -> Array:
 	
 	for i in range(num_layers):
 		var layer = {
-			"amplitude": randf_range(10.0, 100.0),
-			"frequency": randf_range(0.1, 2.0),
-			"phase":     randf_range(0.0, 10.0),
+			#"amplitude": randf_range(10.0, 100.0),
+			#"frequency": randf_range(0.1, 2.0),
+			#"phase":     randf_range(0.0, 10.0),
+			#"wave_type": WaveType.values()[randi() % WaveType.size()]
+			"amplitude": 100,
+			"frequency": 0,
+			"phase":     0,
 			"wave_type": WaveType.values()[randi() % WaveType.size()]
 		}
 		target_layers.append(layer)
@@ -284,6 +317,12 @@ func _on_option_button_item_selected(index: int) -> void:
 	player_layers[current_layer_index].wave_type = WaveType[key]
 	_refresh()
 
+func _on_previous_curve_pressed():
+	pass
+	
+func _on_next_curve_pressed():
+	pass
+	
 func _on_previous_layer() -> void:
 	if current_layer_index > 0:
 		_save_from_ui()
