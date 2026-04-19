@@ -4,7 +4,6 @@ extends Control
 @onready var curve: Control = $"."
 @onready var option_button: OptionButton = $OptionButton
 
-@onready var percentage_label: Label = $Label
 @onready var layer_label: Label = $Label2
 @onready var combine_op_button: Button = $Button3
 
@@ -12,6 +11,8 @@ extends Control
 @export var amplitude_slider: VSlider
 @export var phase_slider: HSlider
 @export var frequency_slider: Knob
+
+@export var percentage_label: Label
 
 @export var previous_layer_button: Button
 @export var next_layer_button: Button
@@ -301,7 +302,7 @@ func _save_from_ui() -> void:
 func score() -> float:
 	var similarity = compare(samples, target)
 	var percent = similarity * 100.0
-	percentage_label.text = str(percent).pad_decimals(2) + "%"
+	percentage_label.text = "Similarity:\n " + str(percent).pad_decimals(2) + "%"
 	return percent
 
 func _refresh() -> void:
