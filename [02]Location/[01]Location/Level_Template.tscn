@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://bp16nh4e1u7rh"]
+[gd_scene load_steps=27 format=3 uid="uid://bp16nh4e1u7rh"]
 
 [ext_resource type="Texture2D" uid="uid://df4hy2oy11l46" path="res://[05]Assets/image.png" id="1_82n5y"]
 [ext_resource type="Texture2D" uid="uid://dm0cbnswnon00" path="res://[05]Assets/VSlider_button.png" id="2_306j3"]
+[ext_resource type="Shader" uid="uid://dxsyctgg0oa50" path="res://[03]UI/wave.gdshader" id="2_kuh44"]
 [ext_resource type="Texture2D" uid="uid://cdu5nl5k0oxfp" path="res://[05]Assets/HSlider_button.png" id="3_306j3"]
 [ext_resource type="Texture2D" uid="uid://c3x67pkseytbp" path="res://[05]Assets/VTick.png" id="3_ptfii"]
 [ext_resource type="Texture2D" uid="uid://cnb4gyvafsfni" path="res://[05]Assets/HTick.png" id="4_ebe6o"]
@@ -9,13 +10,29 @@
 [ext_resource type="Texture2D" uid="uid://lwvoebyp7yui" path="res://[05]Assets/Left_arrow_pressed.png" id="5_2onyg"]
 [ext_resource type="Texture2D" uid="uid://c4nv0q02xomf5" path="res://[05]Assets/Right_arrow.png" id="6_83yxr"]
 [ext_resource type="Texture2D" uid="uid://d23qku0vb5gfo" path="res://[05]Assets/Right_arrow_pressed.png" id="7_ebe6o"]
+[ext_resource type="Texture2D" uid="uid://b8c5bw5exvvne" path="res://[05]Assets/wave_type_bg.png" id="8_1qimg"]
 [ext_resource type="PackedScene" uid="uid://boiseh2yw3m8j" path="res://[06]Common/Knob.tscn" id="10_b4b5q"]
 [ext_resource type="Texture2D" uid="uid://bhcu7s0gdtjje" path="res://[05]Assets/switch_on.png" id="10_l6s12"]
 [ext_resource type="Texture2D" uid="uid://cuvyw4lx3q7qy" path="res://[05]Assets/image.psd.png" id="11_1qkjs"]
 [ext_resource type="Texture2D" uid="uid://cmc0xb6imitle" path="res://[05]Assets/switch_off.png" id="11_02xan"]
+[ext_resource type="Texture2D" uid="uid://cfc6ljt28o6w5" path="res://[05]Assets/post-it.png" id="14_2om8t"]
 [ext_resource type="PackedScene" uid="uid://bq0xbvk3ghk1s" path="res://[03]UI/Curve.tscn" id="16_1qimg"]
+[ext_resource type="Texture2D" uid="uid://b7013wp70u5vr" path="res://[05]Assets/sine.png" id="17_03ap5"]
+[ext_resource type="Texture2D" uid="uid://d0jiiplcco0b6" path="res://[05]Assets/square.png" id="18_kuh44"]
+[ext_resource type="Texture2D" uid="uid://cyyr5lrufcpco" path="res://[05]Assets/saw.png" id="19_bnsis"]
+[ext_resource type="Texture2D" uid="uid://cs4jgsb2g8yqg" path="res://[05]Assets/triangle.png" id="20_eet3d"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xsrc3"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bnsis"]
+shader = ExtResource("2_kuh44")
+shader_parameter/sample_count = 100
+shader_parameter/line_color = Color(0, 1, 0, 1)
+shader_parameter/line_thickness = 0.008
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kuh44"]
+shader = ExtResource("2_kuh44")
+shader_parameter/sample_count = 100
+shader_parameter/line_color = Color(0, 1, 0, 1)
+shader_parameter/line_thickness = 0.008
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2om8t"]
 content_margin_left = 4.0
@@ -46,6 +63,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Image" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(239.46582, 134.18752)
 scale = Vector2(0.32920328, 0.32920325)
 texture = ExtResource("1_82n5y")
@@ -62,9 +80,11 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 10
 
-[node name="Panel" type="Panel" parent="MarginContainer"]
+[node name="Panel" type="TextureRect" parent="MarginContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_xsrc3")
+expand_mode = 1
+stretch_mode = 6
+flip_v = true
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel"]
 layout_mode = 1
@@ -89,6 +109,15 @@ size_flags_stretch_ratio = 1.21
 [node name="Left_Screen" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Left_Screen"]
+material = SubResource("ShaderMaterial_bnsis")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Screen_Separation" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top"]
 layout_mode = 2
@@ -117,6 +146,15 @@ size_flags_vertical = 3
 [node name="Right_Screen" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Right_Screen"]
+material = SubResource("ShaderMaterial_kuh44")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Radio_Bottom" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -179,14 +217,26 @@ alignment = 1
 [node name="Panel" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
 texture_normal = ExtResource("4_rlgnu")
 texture_pressed = ExtResource("5_2onyg")
 
-[node name="Panel2" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer"]
+[node name="Panel2" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+texture = ExtResource("8_1qimg")
+expand_mode = 2
+
+[node name="SelectedWave" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_03ap5")
+expand_mode = 2
 
 [node name="Panel3" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer"]
 custom_minimum_size = Vector2(22, 0)
@@ -200,11 +250,20 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.4
 
-[node name="Knob" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2" instance=ExtResource("10_b4b5q")]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 6
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 16
+
+[node name="Knob" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/MarginContainer" instance=ExtResource("10_b4b5q")]
+layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("11_1qkjs")
+texture_scale = Vector2(0.7, 0.7)
+tick_color = Color(0.051308274, 0.07908102, 0.027278952, 1)
 
 [node name="Wave_Selected" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2"]
 layout_mode = 2
@@ -236,7 +295,33 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.28
 
-[node name="Curve" parent="." node_paths=PackedStringArray("amplitude_slider", "phase_slider", "frequency_slider", "previous_layer_button", "next_layer_button", "previous_wave_type", "next_wave_type", "curve_addition_type", "right_screen", "left_screen") instance=ExtResource("16_1qimg")]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_2om8t")
+stretch_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/TextureRect"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 56.5
+offset_right = 239.0
+offset_bottom = 218.5
+text = "comrade, please report with
+ ten completed graphs by
+  the end of today.
+
+ failure to do so will result
+  in immediate termination of 
+   your citizenship.
+    
+	                may we win this war."
+
+[node name="Curve" parent="." node_paths=PackedStringArray("amplitude_slider", "phase_slider", "frequency_slider", "previous_layer_button", "next_layer_button", "previous_wave_type", "next_wave_type", "curve_addition_type", "selected_wave_texture_rect", "right_screen", "right_color_rect", "left_screen", "left_color_rect") instance=ExtResource("16_1qimg")]
 layout_mode = 1
 anchors_preset = 0
 anchor_right = 0.0
@@ -246,14 +331,21 @@ grow_vertical = 1
 mouse_filter = 2
 amplitude_slider = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Amplitude_Slider")
 phase_slider = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/Phase_Slider")
-frequency_slider = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/Knob")
+frequency_slider = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/MarginContainer/Knob")
 previous_layer_button = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/Wave_Selector/Left_Button")
 next_layer_button = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/Wave_Selector/Left_Button2")
 previous_wave_type = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer/Panel")
 next_wave_type = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer/Panel3")
 curve_addition_type = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/Start_&_Stop")
+selected_wave_texture_rect = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer/Panel2/SelectedWave")
 right_screen = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Right_Screen")
+right_color_rect = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Right_Screen/ColorRect")
 left_screen = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Left_Screen")
+left_color_rect = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Left_Screen/ColorRect")
+sine_image = ExtResource("17_03ap5")
+square_image = ExtResource("18_kuh44")
+saw_image = ExtResource("19_bnsis")
+triangle_image = ExtResource("20_eet3d")
 
 [node name="Phase_Slider2" type="HSlider" parent="."]
 layout_mode = 0

@@ -7,6 +7,7 @@ signal	value_changed(new_value: float)
 @export var texture: Texture2D
 
 @onready var texture_rect: TextureRect = $TextureRect
+@export var texture_scale: Vector2 = Vector2(1.0, 1.0)
 
 @export var min_value: float = 0.0
 @export var max_value: float = 1.0
@@ -20,6 +21,7 @@ signal	value_changed(new_value: float)
 @export var tick_color: Color = Color.BLACK
 @export var tick_size: float = 4.0
 @export var tick_length: float = 8.0
+@export var tick_gap: float = 32.0
 
 var _value: float = 0.0
 var _dragging: bool = false
@@ -33,7 +35,7 @@ var value: float:
 
 func _draw() -> void:
 	var center := size / 2.0
-	var radius: float = min(size.x, size.y) / 2.0 - 50.0
+	var radius: float = min(size.x, size.y) / 2.0 - tick_gap
 
 	for i in range(tick_count):
 		var angle_deg := lerpf(min_angle_deg, max_angle_deg, float(i) / (tick_count - 1))
@@ -50,6 +52,7 @@ func _ready() -> void:
 	if texture:
 		texture_rect.texture = texture
 	await get_tree().process_frame
+	texture_rect.scale = texture_scale
 	texture_rect.pivot_offset = texture_rect.size / 2.0
 	_update_rotation()
 

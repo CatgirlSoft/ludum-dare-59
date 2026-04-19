@@ -20,8 +20,19 @@ extends Control
 
 @export var curve_addition_type: TextureButton
 
+@export var selected_wave_texture_rect: TextureRect
+
 @export var right_screen: Control
+@export var right_color_rect: ColorRect
 @export var left_screen: Control
+@export var left_color_rect: ColorRect
+
+@export_group("Wave_Images")
+@export var sine_image: Texture2D
+@export var square_image: Texture2D
+@export var saw_image: Texture2D
+@export var triangle_image: Texture2D
+
 
 @export_group("Value")
 @export var number_of_layers: int = 2
@@ -116,27 +127,28 @@ func wave(x: float, type: WaveType = WaveType.SINE) -> float:
 	return 0.0
 
 func _draw() -> void:
-	var left_screen_center = left_screen.global_position + left_screen.size / 2
-	var left_screen_width = left_screen.size.x
-	var right_screen_center = right_screen.global_position + right_screen.size / 2
-	var right_screen_width = right_screen.size.x
-
-	var samples_count = samples.size()
-	var target_count = target.size()
-	for i in range(samples_count - 1):
-		var x0 = left_screen_center.x + (float(i) / (samples_count - 1) - 0.5) * left_screen_width
-		var x1 = left_screen_center.x + (float(i + 1) / (samples_count - 1) - 0.5) * left_screen_width
-		draw_line(
-			Vector2(x0, left_screen_center.y + samples[i]),
-			Vector2(x1, left_screen_center.y + samples[i + 1]),
-			Color.ALICE_BLUE, 3, true)
-	for i in range(target_count - 1):
-		var x0 = right_screen_center.x + (float(i) / (target_count - 1) - 0.5) * right_screen_width
-		var x1 = right_screen_center.x + (float(i + 1) / (target_count - 1) - 0.5) * right_screen_width
-		draw_line(
-			Vector2(x0, right_screen_center.y + target[i]),
-			Vector2(x1, right_screen_center.y + target[i + 1]),
-			Color.ALICE_BLUE, 3, true)
+	pass
+	#var left_screen_center = left_screen.global_position + left_screen.size / 2
+	#var left_screen_width = left_screen.size.x
+	#var right_screen_center = right_screen.global_position + right_screen.size / 2
+	#var right_screen_width = right_screen.size.x
+#
+	#var samples_count = samples.size()
+	#var target_count = target.size()
+	#for i in range(samples_count - 1):
+		#var x0 = left_screen_center.x + (float(i) / (samples_count - 1) - 0.5) * left_screen_width
+		#var x1 = left_screen_center.x + (float(i + 1) / (samples_count - 1) - 0.5) * left_screen_width
+		#draw_line(
+			#Vector2(x0, left_screen_center.y + samples[i]),
+			#Vector2(x1, left_screen_center.y + samples[i + 1]),
+			#Color.ALICE_BLUE, 3, true)
+	#for i in range(target_count - 1):
+		#var x0 = right_screen_center.x + (float(i) / (target_count - 1) - 0.5) * right_screen_width
+		#var x1 = right_screen_center.x + (float(i + 1) / (target_count - 1) - 0.5) * right_screen_width
+		#draw_line(
+			#Vector2(x0, right_screen_center.y + target[i]),
+			#Vector2(x1, right_screen_center.y + target[i + 1]),
+			#Color.ALICE_BLUE, 3, true)
 
 func compare(a: Array, b: Array) -> float:
 	var min_size = mini(a.size(), b.size())
@@ -174,9 +186,9 @@ func generate_random_combined(num_layers: int, number_samples: int) -> Array:
 	
 	for i in range(num_layers):
 		var layer = {
-			"amplitude": randf_range(min(amplitude_slider.min_value, 2.0), min(amplitude_slider.max_value, 100.0)),
-			"frequency": randf_range(frequency_slider.min_value, frequency_slider.max_value),
-			"phase":     randf_range(phase_slider.min_value, phase_slider.max_value),
+			"amplitude": randf_range(max(amplitude_slider.min_value, 20.0), min(amplitude_slider.max_value, 80.0)),
+			"frequency": randf_range(max(frequency_slider.min_value, 0.3), min(frequency_slider.max_value, 1.7)),
+			"phase":     randf_range(max(phase_slider.min_value, 1.0), min(phase_slider.max_value, 7.0)),
 			"wave_type": WaveType.values()[randi() % WaveType.size()]
 		}
 		target_layers.append(layer)
@@ -228,6 +240,26 @@ func generate_random(number_samples: int) -> Array:
 		x += step
 	return inner
 
+func _update_shader(rect: ColorRect, data: Array) -> void:
+	var img = Image.create(data.size(), 1, false, Image.FORMAT_RF)
+	for i in range(data.size()):
+		var normalized = (data[i] / -amplitude + 1.0) / 2.0
+		img.set_pixel(i, 0, Color(normalized, 0, 0, 1))
+	var tex = ImageTexture.create_from_image(img)
+	(rect.material as ShaderMaterial).set_shader_parameter("samples", tex)
+	
+
+func _update_wave_texture(type: WaveType) -> void:
+	match type:
+		WaveType.SINE:
+			selected_wave_texture_rect.texture = sine_image
+		WaveType.SQUARE:
+			selected_wave_texture_rect.texture = square_image
+		WaveType.SAW:
+			selected_wave_texture_rect.texture = saw_image
+		WaveType.TRIANGLE:
+			selected_wave_texture_rect.texture = triangle_image
+
 func _update_ui() -> void:
 	var layer = player_layers[current_layer_index]
 	amplitude_slider.value = layer.amplitude
@@ -260,6 +292,8 @@ func _refresh() -> void:
 	samples = _evaluate_layers(player_layers, player_ops, number_of_samples)
 	var new_score = score()
 	score_changed.emit(new_score)
+	_update_shader(left_color_rect, samples)
+	_update_shader(right_color_rect, target)
 	queue_redraw()
 
 func _on_amplitude_value_changed(value: float) -> void:
@@ -286,6 +320,7 @@ func _on_previous_curve_pressed():
 	var current = player_layers[current_layer_index].wave_type
 	var index = types.find(current)
 	player_layers[current_layer_index].wave_type = types[(index - 1 + types.size()) % types.size()]
+	_update_wave_texture(player_layers[current_layer_index].wave_type)
 	_refresh()
 
 func _on_next_curve_pressed():
@@ -293,6 +328,7 @@ func _on_next_curve_pressed():
 	var current = player_layers[current_layer_index].wave_type
 	var index = types.find(current)
 	player_layers[current_layer_index].wave_type = types[(index + 1) % types.size()]
+	_update_wave_texture(player_layers[current_layer_index].wave_type)
 	_refresh()
 	
 func _on_previous_layer() -> void:
