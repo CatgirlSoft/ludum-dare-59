@@ -22,14 +22,11 @@ extends Control
 
 @export var curve_addition_type: TextureButton
 
+@export var right_screen: Control
+@export var left_screen: Control
 
 @export_group("Value")
-@export var number_of_layers: int = 2
-
-@export var target_offset_x: float = 0.0
-@export var target_offset_y: float = 0.0
-@export var player_offset_x: float = 100.0
-@export var player_offset_y: float = 0.0
+@export var number_of_layers: int = 1
 
 @export var number_of_samples: int = 10
 
@@ -125,18 +122,27 @@ func wave(x: float, type: WaveType = WaveType.SINE) -> float:
 	return 0.0
 
 func _draw() -> void:
-	for i in range(samples.size() - 1):
+	var left_screen_center = left_screen.global_position + left_screen.size / 2
+	var left_screen_width = left_screen.size.x
+	var right_screen_center = right_screen.global_position + right_screen.size / 2
+	var right_screen_width = right_screen.size.x
+
+	var samples_count = samples.size()
+	var target_count = target.size()
+	for i in range(samples_count - 1):
+		var x0 = left_screen_center.x + (float(i) / (samples_count - 1) - 0.5) * left_screen_width
+		var x1 = left_screen_center.x + (float(i + 1) / (samples_count - 1) - 0.5) * left_screen_width
 		draw_line(
-			Vector2((x_size * i) - (x_size * player_offset_x), samples[i] + player_offset_y),
-			Vector2((x_size * (i + 1) - (x_size * player_offset_x)), samples[i + 1] + player_offset_y),
-			Color.ALICE_BLUE, 3, true
-		)
-	for i in range(target.size() - 1):
+			Vector2(x0, left_screen_center.y + samples[i]),
+			Vector2(x1, left_screen_center.y + samples[i + 1]),
+			Color.ALICE_BLUE, 3, true)
+	for i in range(target_count - 1):
+		var x0 = right_screen_center.x + (float(i) / (target_count - 1) - 0.5) * right_screen_width
+		var x1 = right_screen_center.x + (float(i + 1) / (target_count - 1) - 0.5) * right_screen_width
 		draw_line(
-			Vector2(x_size * i - (x_size * target_offset_x), target[i] + target_offset_y),
-			Vector2(x_size * (i + 1) - (x_size * target_offset_x), target[i + 1] + target_offset_y),
-			Color.ALICE_BLUE, 3, true
-		)
+			Vector2(x0, right_screen_center.y + target[i]),
+			Vector2(x1, right_screen_center.y + target[i + 1]),
+			Color.ALICE_BLUE, 3, true)
 
 func compare(a: Array, b: Array) -> float:
 	var min_size = mini(a.size(), b.size())
@@ -185,14 +191,14 @@ func generate_random_combined(num_layers: int, number_samples: int) -> Array:
 	
 	for i in range(num_layers):
 		var layer = {
-			#"amplitude": randf_range(10.0, 100.0),
-			#"frequency": randf_range(0.1, 2.0),
-			#"phase":     randf_range(0.0, 10.0),
-			#"wave_type": WaveType.values()[randi() % WaveType.size()]
-			"amplitude": 100,
-			"frequency": 0,
-			"phase":     0,
+			"amplitude": randf_range(10.0, 100.0),
+			"frequency": randf_range(0.1, 2.0),
+			"phase":     randf_range(0.0, 10.0),
 			"wave_type": WaveType.values()[randi() % WaveType.size()]
+			#"amplitude": 100.0,
+			#"frequency": 0,
+			#"phase":     0,
+			#"wave_type": WaveType.SQUARE
 		}
 		target_layers.append(layer)
 		

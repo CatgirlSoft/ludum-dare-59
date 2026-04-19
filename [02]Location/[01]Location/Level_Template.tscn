@@ -261,7 +261,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.28
 
-[node name="Curve" parent="." node_paths=PackedStringArray("amplitude_slider", "phase_slider", "frequency_slider", "previous_layer_button", "next_layer_button", "previous_wave_type", "next_wave_type", "curve_addition_type") instance=ExtResource("16_1qimg")]
+[node name="Curve" parent="." node_paths=PackedStringArray("amplitude_slider", "phase_slider", "frequency_slider", "previous_layer_button", "next_layer_button", "previous_wave_type", "next_wave_type", "curve_addition_type", "right_screen", "left_screen") instance=ExtResource("16_1qimg")]
 layout_mode = 1
 anchors_preset = 0
 anchor_right = 0.0
@@ -277,10 +277,8 @@ next_layer_button = NodePath("../MarginContainer/Panel/MarginContainer/VBoxConta
 previous_wave_type = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer/Panel")
 next_wave_type = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer/Panel3")
 curve_addition_type = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/Start_&_Stop")
-target_offset_x = -110.0
-target_offset_y = -35.0
-player_offset_x = -8.0
-player_offset_y = 170.0
+right_screen = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Right_Screen")
+left_screen = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Left_Screen")
 
 [node name="Phase_Slider2" type="HSlider" parent="."]
 layout_mode = 0
