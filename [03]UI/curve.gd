@@ -9,10 +9,8 @@ extends Control
 
 @export_group("Node_reference")
 @export var amplitude_slider: VSlider
-
 @export var phase_slider: HSlider
-
-@export var frequency_slider: HSlider
+@export var frequency_slider: Knob
 
 @export var previous_layer_button: Button
 @export var next_layer_button: Button
@@ -26,7 +24,7 @@ extends Control
 @export var left_screen: Control
 
 @export_group("Value")
-@export var number_of_layers: int = 1
+@export var number_of_layers: int = 2
 
 @export var number_of_samples: int = 10
 
@@ -53,6 +51,9 @@ var player_layers = []
 var player_ops = []
 var current_layer_index: int = 0
 
+signal score_changed(new_score: float)
+signal layer_changed(layer_index: int)
+
 enum WaveType {
 	SINE,
 	SQUARE,
@@ -78,13 +79,6 @@ func _ready() -> void:
 	if next_wave_type: next_wave_type.connect("pressed",_on_next_curve_pressed)
 	
 	if curve_addition_type: curve_addition_type.connect("pressed",_on_toggle_op)
-
-	x_size = 5
-	step = 0.1
-	
-	for en in WaveType.keys():
-		option_button.add_item(en, WaveType[en])
-	option_button.select(0)
 
 	target = generate_random_combined(number_of_layers, number_of_samples)
 
@@ -152,17 +146,6 @@ func compare(a: Array, b: Array) -> float:
 		sum += diff * diff
 	return sum / min_size
 
-func generate(number_samples: int) -> Array:
-	var inner = []
-
-	var x = 0.0
-	while x < number_samples:
-		var time = frequency * x
-		var value = amplitude * wave(time - phase, wave_type)
-		inner.append(value)
-		x += step
-	return inner
-
 func combine(a: Array, b: Array, op: CombineOp) -> Array:
 	var result = []
 	@warning_ignore("shadowed_variable_base_class")
@@ -191,14 +174,10 @@ func generate_random_combined(num_layers: int, number_samples: int) -> Array:
 	
 	for i in range(num_layers):
 		var layer = {
-			"amplitude": randf_range(10.0, 100.0),
-			"frequency": randf_range(0.1, 2.0),
-			"phase":     randf_range(0.0, 10.0),
+			"amplitude": randf_range(min(amplitude_slider.min_value, 2.0), min(amplitude_slider.max_value, 100.0)),
+			"frequency": randf_range(frequency_slider.min_value, frequency_slider.max_value),
+			"phase":     randf_range(phase_slider.min_value, phase_slider.max_value),
 			"wave_type": WaveType.values()[randi() % WaveType.size()]
-			#"amplitude": 100.0,
-			#"frequency": 0,
-			#"phase":     0,
-			#"wave_type": WaveType.SQUARE
 		}
 		target_layers.append(layer)
 		
@@ -227,16 +206,17 @@ func _first_layer() -> Dictionary:
 	return {
 		"amplitude": randf_range(30.0, 70.0),
 		"frequency": randf_range(0.3, 1.7),
-		"phase": randf_range(0.5, 1.5),
+		"phase":     randf_range(0.5, 1.5),
 		"wave_type": WaveType.SINE
 	}
 
 func generate_random(number_samples: int) -> Array:
 	var inner = []
-	
+
 	target_amplitude = randf_range(0.0, 100.0)
 	target_frequency = randf_range(0.0, 2.0)
 	target_phase = randf_range(0.0, 10.0)
+
 	var rand_type = WaveType.keys()[randi() % WaveType.size()]
 	target_wave_type = WaveType[rand_type]
 
@@ -253,11 +233,6 @@ func _update_ui() -> void:
 	amplitude_slider.value = layer.amplitude
 	frequency_slider.value = layer.frequency
 	phase_slider.value = layer.phase
-	for i in range(option_button.item_count):
-		if option_button.get_item_id(i) == layer.wave_type:
-			option_button.select(i)
-			break
-	layer_label.text = "Layer %d / %d" % [current_layer_index + 1, player_layers.size()]
 	_update_combine_op_button()
 
 func _update_combine_op_button() -> void:
@@ -271,20 +246,9 @@ func _save_from_ui() -> void:
 	player_layers[current_layer_index] = {
 		"amplitude": amplitude_slider.value,
 		"frequency": frequency_slider.value,
-		"phase": phase_slider.value,
-		"wave_type": WaveType[WaveType.find_key(option_button.get_item_id(option_button.selected))]
+		"phase":     phase_slider.value,
+		"wave_type": player_layers[current_layer_index].wave_type
 	}
-
-#func score() -> float:
-	#var wave_score = 0.0
-	#if wave_type == target_wave_type:
-		#wave_score = 40.0
-	#var amplitude_score = 20.0 * _proximity(amplitude, target_amplitude, 100.0)
-	#var frequency_score = 30.0 * _proximity(frequency, target_frequency, 2.0)
-	#var phase_score = 10.0 * _proximity(phase, target_phase, 10.0)
-	#var percentage = wave_score + amplitude_score + frequency_score + phase_score
-	#percentage_label.text = str(percentage).pad_decimals(2) + "%"
-	#return percentage
 
 func score() -> float:
 	var mse = compare(samples, target)
@@ -292,17 +256,10 @@ func score() -> float:
 	percentage_label.text = str(percent).pad_decimals(2) + "%"
 	return percent
 
-
-@warning_ignore("shadowed_variable")
-func _proximity(value: float, target: float, max_range: float) -> float:
-	var tolerance = max_range * 0.1
-	var diff = abs(value - target)
-	return clampf(1.0 - (diff / tolerance), 0.0, 1.0)
-
 func _refresh() -> void:
 	samples = _evaluate_layers(player_layers, player_ops, number_of_samples)
-	score()
-	print(score())
+	var new_score = score()
+	score_changed.emit(new_score)
 	queue_redraw()
 
 func _on_amplitude_value_changed(value: float) -> void:
@@ -314,8 +271,9 @@ func _on_phase_value_changed(value: float) -> void:
 	_refresh()
 
 func _on_frequency_value_changed(value: float) -> void:
-	player_layers[current_layer_index].frequency = value
-	_refresh()
+	if player_layers:
+		player_layers[current_layer_index].frequency = value
+		_refresh()
 
 func _on_option_button_item_selected(index: int) -> void:
 	var id = option_button.get_item_id(index)
@@ -324,26 +282,32 @@ func _on_option_button_item_selected(index: int) -> void:
 	_refresh()
 
 func _on_previous_curve_pressed():
-	pass
-	
+	var types = WaveType.values()
+	var current = player_layers[current_layer_index].wave_type
+	var index = types.find(current)
+	player_layers[current_layer_index].wave_type = types[(index - 1 + types.size()) % types.size()]
+	_refresh()
+
 func _on_next_curve_pressed():
-	pass
+	var types = WaveType.values()
+	var current = player_layers[current_layer_index].wave_type
+	var index = types.find(current)
+	player_layers[current_layer_index].wave_type = types[(index + 1) % types.size()]
+	_refresh()
 	
 func _on_previous_layer() -> void:
-	if current_layer_index > 0:
-		_save_from_ui()
-		current_layer_index -= 1
-		_update_ui()
-		print(current_layer_index)
-		_refresh()
+	_save_from_ui()
+	current_layer_index = (current_layer_index - 1 + player_layers.size()) % player_layers.size()
+	_update_ui()
+	layer_changed.emit(current_layer_index)
+	_refresh()
 
 func _on_next_layer() -> void:
-	if current_layer_index < player_layers.size() - 1:
-		_save_from_ui()
-		current_layer_index += 1
-		_update_ui()
-		print(current_layer_index)
-		_refresh()
+	_save_from_ui()
+	current_layer_index = (current_layer_index + 1) % player_layers.size()
+	_update_ui()
+	layer_changed.emit(current_layer_index)
+	_refresh()
 
 func _on_toggle_op() -> void:
 	if current_layer_index < player_ops.size():
