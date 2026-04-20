@@ -1,26 +1,53 @@
-[gd_scene load_steps=27 format=3 uid="uid://bp16nh4e1u7rh"]
+[gd_scene load_steps=38 format=3 uid="uid://bp16nh4e1u7rh"]
 
 [ext_resource type="Script" uid="uid://6eup5vgsmqxd" path="res://[02]Location/[01]Location/level_template.gd" id="1_kuh44"]
-[ext_resource type="Texture2D" uid="uid://dm0cbnswnon00" path="res://[05]Assets/VSlider_button.png" id="2_306j3"]
+[ext_resource type="Texture2D" uid="uid://dm0cbnswnon00" path="res://[05]Assets/Art/VSlider_button.png" id="2_306j3"]
+[ext_resource type="Texture2D" uid="uid://n254mt8h84id" path="res://[05]Assets/design-01kpn1pgae-1776675476.png" id="2_eet3d"]
 [ext_resource type="Shader" uid="uid://dxsyctgg0oa50" path="res://[03]UI/wave.gdshader" id="2_kuh44"]
-[ext_resource type="Texture2D" uid="uid://cdu5nl5k0oxfp" path="res://[05]Assets/HSlider_button.png" id="3_306j3"]
-[ext_resource type="Texture2D" uid="uid://c3x67pkseytbp" path="res://[05]Assets/VTick.png" id="3_ptfii"]
-[ext_resource type="Texture2D" uid="uid://cnb4gyvafsfni" path="res://[05]Assets/HTick.png" id="4_ebe6o"]
-[ext_resource type="Texture2D" uid="uid://dt0qwnv55w3ul" path="res://[05]Assets/Left_arrow.png" id="4_rlgnu"]
-[ext_resource type="Texture2D" uid="uid://lwvoebyp7yui" path="res://[05]Assets/Left_arrow_pressed.png" id="5_2onyg"]
-[ext_resource type="Texture2D" uid="uid://c4nv0q02xomf5" path="res://[05]Assets/Right_arrow.png" id="6_83yxr"]
-[ext_resource type="Texture2D" uid="uid://d23qku0vb5gfo" path="res://[05]Assets/Right_arrow_pressed.png" id="7_ebe6o"]
-[ext_resource type="Texture2D" uid="uid://b8c5bw5exvvne" path="res://[05]Assets/wave_type_bg.png" id="8_1qimg"]
+[ext_resource type="Texture2D" uid="uid://cdu5nl5k0oxfp" path="res://[05]Assets/Art/HSlider_button.png" id="3_306j3"]
+[ext_resource type="FontFile" uid="uid://dkpw8p71g8e4" path="res://[05]Assets/font/7SEGMENTALDIGITALDISPLAY.ttf" id="3_bnsis"]
+[ext_resource type="Shader" uid="uid://c37lyys318tw2" path="res://[02]Location/[01]Location/Screen_shader.gdshader" id="3_j5b4o"]
+[ext_resource type="Texture2D" uid="uid://c3x67pkseytbp" path="res://[05]Assets/Art/VTick.png" id="3_ptfii"]
+[ext_resource type="Texture2D" uid="uid://cnb4gyvafsfni" path="res://[05]Assets/Art/HTick.png" id="4_ebe6o"]
+[ext_resource type="Texture2D" uid="uid://dt0qwnv55w3ul" path="res://[05]Assets/Art/Left_arrow.png" id="4_rlgnu"]
+[ext_resource type="Texture2D" uid="uid://lwvoebyp7yui" path="res://[05]Assets/Art/Left_arrow_pressed.png" id="5_2onyg"]
+[ext_resource type="StyleBox" uid="uid://csghjfh0t67jy" path="res://[02]Location/[01]Location/Metal_Border.tres" id="5_o7vm5"]
+[ext_resource type="StyleBox" uid="uid://dh01avl7yr0lr" path="res://[02]Location/[01]Location/Black_screen.tres" id="6_0l1wn"]
+[ext_resource type="Texture2D" uid="uid://c4nv0q02xomf5" path="res://[05]Assets/Art/Right_arrow.png" id="6_83yxr"]
+[ext_resource type="Texture2D" uid="uid://d23qku0vb5gfo" path="res://[05]Assets/Art/Right_arrow_pressed.png" id="7_ebe6o"]
+[ext_resource type="Texture2D" uid="uid://b8c5bw5exvvne" path="res://[05]Assets/Art/wave_type_bg.png" id="8_1qimg"]
 [ext_resource type="PackedScene" uid="uid://boiseh2yw3m8j" path="res://[06]Common/Knob.tscn" id="10_b4b5q"]
-[ext_resource type="Texture2D" uid="uid://bhcu7s0gdtjje" path="res://[05]Assets/switch_on.png" id="10_l6s12"]
-[ext_resource type="Texture2D" uid="uid://cuvyw4lx3q7qy" path="res://[05]Assets/image.psd.png" id="11_1qkjs"]
-[ext_resource type="Texture2D" uid="uid://cmc0xb6imitle" path="res://[05]Assets/switch_off.png" id="11_02xan"]
-[ext_resource type="Texture2D" uid="uid://cfc6ljt28o6w5" path="res://[05]Assets/post-it.png" id="14_2om8t"]
+[ext_resource type="Texture2D" uid="uid://bhcu7s0gdtjje" path="res://[05]Assets/Art/switch_on.png" id="10_l6s12"]
+[ext_resource type="Texture2D" uid="uid://cmc0xb6imitle" path="res://[05]Assets/Art/switch_off.png" id="11_02xan"]
+[ext_resource type="Texture2D" uid="uid://cfc6ljt28o6w5" path="res://[05]Assets/Art/post-it.png" id="14_2om8t"]
 [ext_resource type="PackedScene" uid="uid://bq0xbvk3ghk1s" path="res://[03]UI/Curve.tscn" id="16_1qimg"]
-[ext_resource type="Texture2D" uid="uid://b7013wp70u5vr" path="res://[05]Assets/sine.png" id="17_03ap5"]
-[ext_resource type="Texture2D" uid="uid://d0jiiplcco0b6" path="res://[05]Assets/square.png" id="18_kuh44"]
-[ext_resource type="Texture2D" uid="uid://cyyr5lrufcpco" path="res://[05]Assets/saw.png" id="19_bnsis"]
-[ext_resource type="Texture2D" uid="uid://cs4jgsb2g8yqg" path="res://[05]Assets/triangle.png" id="20_eet3d"]
+[ext_resource type="Texture2D" uid="uid://b7013wp70u5vr" path="res://[05]Assets/Art/sine.png" id="17_03ap5"]
+[ext_resource type="Texture2D" uid="uid://d0jiiplcco0b6" path="res://[05]Assets/Art/square.png" id="18_kuh44"]
+[ext_resource type="Texture2D" uid="uid://b6l5dykpjohwv" path="res://[05]Assets/knob.png" id="19_0l1wn"]
+[ext_resource type="Texture2D" uid="uid://cyyr5lrufcpco" path="res://[05]Assets/Art/saw.png" id="19_bnsis"]
+[ext_resource type="Texture2D" uid="uid://cs4jgsb2g8yqg" path="res://[05]Assets/Art/triangle.png" id="20_eet3d"]
+[ext_resource type="Texture2D" uid="uid://b43va6cuyjmiw" path="res://[05]Assets/progresse_bar.png" id="23_g3gpu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5b4o"]
+bg_color = Color(0.14697002, 0.23, 0.1426, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o7vm5"]
+shader = ExtResource("3_j5b4o")
+shader_parameter/line_width = 1.0
+shader_parameter/cell_size = 64.0
+shader_parameter/line_color = Color(0.47440952, 0.18958753, 0.036105763, 1)
+shader_parameter/grid_offset = Vector2(67.92, 28.02)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g3gpu"]
+shader = ExtResource("3_j5b4o")
+shader_parameter/line_width = 1.0
+shader_parameter/cell_size = 64.0
+shader_parameter/line_color = Color(0.6509804, 0.27058825, 0.06666667, 1)
+shader_parameter/grid_offset = Vector2(35.92, 60.02)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bnsis"]
 shader = ExtResource("2_kuh44")
@@ -28,7 +55,21 @@ shader_parameter/sample_count = 100
 shader_parameter/line_color = Color(0, 1, 0, 1)
 shader_parameter/line_thickness = 0.008
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kuh44"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0l1wn"]
+shader = ExtResource("3_j5b4o")
+shader_parameter/line_width = 1.0
+shader_parameter/cell_size = 64.0
+shader_parameter/line_color = Color(0.47440952, 0.18958753, 0.036105763, 1)
+shader_parameter/grid_offset = Vector2(59.47, 27.92)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v0786"]
+shader = ExtResource("3_j5b4o")
+shader_parameter/line_width = 1.0
+shader_parameter/cell_size = 64.0
+shader_parameter/line_color = Color(0.62455577, 0.25783578, 0.06262675, 1)
+shader_parameter/grid_offset = Vector2(27.47, 59.92)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j5b4o"]
 shader = ExtResource("2_kuh44")
 shader_parameter/sample_count = 100
 shader_parameter/line_color = Color(0, 1, 0, 1)
@@ -77,6 +118,7 @@ theme_override_constants/margin_bottom = 10
 
 [node name="Panel" type="TextureRect" parent="MarginContainer"]
 layout_mode = 2
+texture = ExtResource("2_eet3d")
 expand_mode = 1
 stretch_mode = 6
 flip_v = true
@@ -88,24 +130,62 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="Radio_Top" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.21
 
-[node name="Left_Screen" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top"]
+[node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("5_o7vm5")
 
-[node name="ColorRect" type="ColorRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Left_Screen"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Left_Screen" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel/MarginContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_j5b4o")
+
+[node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel/MarginContainer/Left_Screen"]
+material = SubResource("ShaderMaterial_o7vm5")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel2" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel/MarginContainer/Left_Screen"]
+material = SubResource("ShaderMaterial_g3gpu")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel/MarginContainer/Left_Screen"]
 material = SubResource("ShaderMaterial_bnsis")
 layout_mode = 1
 anchors_preset = 15
@@ -119,14 +199,219 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.35
 
-[node name="LED" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation"]
+[node name="Panel4" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.52
+
+[node name="Panel3" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
+theme_override_styles/panel = ExtResource("5_o7vm5")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/Panel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="LED" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/Panel3/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_styles/panel = ExtResource("6_0l1wn")
+
+[node name="Timer" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/Panel3/MarginContainer/LED"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.74, 0.3626, 0.3626, 1)
+theme_override_fonts/font = ExtResource("3_bnsis")
+theme_override_font_sizes/font_size = 48
+text = "99:99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.9
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.33
+theme_override_styles/panel = ExtResource("5_o7vm5")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("6_0l1wn")
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer/Panel/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7137255, 0.34901962, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("3_bnsis")
+theme_override_font_sizes/font_size = 32
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.33
+theme_override_styles/panel = ExtResource("5_o7vm5")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer/Panel2/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("6_0l1wn")
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer/Panel2/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7137255, 0.34901962, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("3_bnsis")
+theme_override_font_sizes/font_size = 32
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer2"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.33
+theme_override_styles/panel = ExtResource("5_o7vm5")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer2/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("6_0l1wn")
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer2/Panel/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7137255, 0.34901962, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("3_bnsis")
+theme_override_font_sizes/font_size = 32
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer2"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.33
+theme_override_styles/panel = ExtResource("5_o7vm5")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer2/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer2/Panel2/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("6_0l1wn")
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer2/Panel2/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7137255, 0.34901962, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("3_bnsis")
+theme_override_font_sizes/font_size = 32
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Wave_Selector" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation"]
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 2.43
 
 [node name="Left_Button" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/Wave_Selector"]
 layout_mode = 2
@@ -138,12 +423,53 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Right_Screen" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top"]
+[node name="Panel2" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel2" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("5_o7vm5")
 
-[node name="ColorRect" type="ColorRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Right_Screen"]
-material = SubResource("ShaderMaterial_kuh44")
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Right_Screen" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel2/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_j5b4o")
+
+[node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel2/MarginContainer/Right_Screen"]
+material = SubResource("ShaderMaterial_0l1wn")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel2" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel2/MarginContainer/Right_Screen"]
+material = SubResource("ShaderMaterial_v0786")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel2/MarginContainer/Right_Screen"]
+material = SubResource("ShaderMaterial_j5b4o")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -159,8 +485,27 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.28
+theme_override_constants/separation = 25
 
-[node name="Amplitude_Slider" type="VSlider" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control"]
+[node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.22
+theme_override_styles/panel = ExtResource("5_o7vm5")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Amplitude_Slider" type="VSlider" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Panel/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.3
@@ -183,7 +528,25 @@ ticks_position = 2
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Phase_Slider" type="HSlider" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control"]
+[node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+theme_override_styles/panel = ExtResource("5_o7vm5")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Phase_Slider" type="HSlider" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/Panel/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.3
@@ -201,29 +564,54 @@ tick_count = 10
 ticks_on_borders = true
 ticks_position = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control"]
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_right = 60
+
+[node name="Panel4" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+theme_override_styles/panel = ExtResource("5_o7vm5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/MarginContainer/Panel4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
-theme_override_constants/separation = 2
-alignment = 1
+theme_override_constants/separation = -8
 
-[node name="Panel" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer"]
+[node name="Panel" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/MarginContainer/Panel4/HBoxContainer"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 size_flags_horizontal = 6
+size_flags_vertical = 4
 texture_normal = ExtResource("4_rlgnu")
 texture_pressed = ExtResource("5_2onyg")
 
-[node name="Panel2" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/MarginContainer/Panel4/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="Panel2" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/MarginContainer/Panel4/HBoxContainer/MarginContainer"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("8_1qimg")
 expand_mode = 2
 
-[node name="SelectedWave" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer/Panel2"]
+[node name="SelectedWave" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/MarginContainer/Panel4/HBoxContainer/MarginContainer/Panel2"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -233,10 +621,11 @@ grow_vertical = 2
 texture = ExtResource("17_03ap5")
 expand_mode = 2
 
-[node name="Panel3" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer"]
+[node name="Panel3" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/MarginContainer/Panel4/HBoxContainer"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
+size_flags_vertical = 4
 texture_normal = ExtResource("6_83yxr")
 texture_pressed = ExtResource("7_ebe6o")
 
@@ -247,16 +636,18 @@ size_flags_stretch_ratio = 0.4
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2"]
 layout_mode = 2
-theme_override_constants/margin_left = 32
+theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 32
+theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 16
 
 [node name="Knob" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/MarginContainer" instance=ExtResource("10_b4b5q")]
+layout_direction = 2
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 0
 size_flags_vertical = 4
-texture = ExtResource("11_1qkjs")
+size_flags_stretch_ratio = 0.0
+texture = ExtResource("19_0l1wn")
 texture_scale = Vector2(0.7, 0.7)
 tick_color = Color(0.051308274, 0.07908102, 0.027278952, 1)
 
@@ -264,28 +655,61 @@ tick_color = Color(0.051308274, 0.07908102, 0.027278952, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.65
+theme_override_styles/panel = ExtResource("5_o7vm5")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/Wave_Selected"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/Wave_Selected/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("6_0l1wn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/Wave_Selected/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/Wave_Selected/MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72156864, 0.3529412, 0.3529412, 1)
+theme_override_fonts/font = ExtResource("3_bnsis")
+theme_override_font_sizes/font_size = 25
+text = "Opperation"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/Wave_Selected/MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72156864, 0.3529412, 0.3529412, 1)
+theme_override_fonts/font = ExtResource("3_bnsis")
+theme_override_font_sizes/font_size = 25
+text = "ADDition"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Start_&_Stop" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.65
+size_flags_horizontal = 6
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.32
 texture_normal = ExtResource("10_l6s12")
 texture_pressed = ExtResource("11_02xan")
 
-[node name="Info_Vbox" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.48
-
-[node name="Clock" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Info_Vbox"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Speaker" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Info_Vbox"]
-layout_mode = 2
-size_flags_vertical = 3
-
 [node name="Dialogue_Box" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.28
@@ -295,6 +719,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -19.04
+offset_top = -19.0
+offset_right = -19.040009
+offset_bottom = 19.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("14_2om8t")
@@ -318,13 +746,67 @@ text = "comrade, please report with
 
 [node name="Label2" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/TextureRect"]
 layout_mode = 0
-offset_left = 240.0
-offset_top = 34.5
-offset_right = 439.0
-offset_bottom = 161.5
+offset_left = 256.04004
+offset_top = 58.0
+offset_right = 439.04004
+offset_bottom = 185.0
 theme_override_font_sizes/font_size = 48
 text = "similarity:
 %d"
+
+[node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -118.0
+offset_top = -89.0
+offset_right = -24.0
+offset_bottom = 109.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("5_o7vm5")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("6_0l1wn")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/Panel/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/Panel/MarginContainer/Panel/MarginContainer"]
+modulate = Color(0.74, 0.74, 0.74, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+step = 10.0
+value = 70.0
+fill_mode = 3
+texture_progress = ExtResource("23_g3gpu")
+tint_under = Color(0.66740394, 1.540184e-06, 0.403204, 1)
+tint_over = Color(0.81710166, 6.160736e-06, 0.5315976, 1)
 
 [node name="Curve" parent="." node_paths=PackedStringArray("amplitude_slider", "phase_slider", "frequency_slider", "percentage_label", "previous_layer_button", "next_layer_button", "previous_wave_type", "next_wave_type", "curve_addition_type", "selected_wave_texture_rect", "right_screen", "right_color_rect", "left_screen", "left_color_rect") instance=ExtResource("16_1qimg")]
 layout_mode = 1
@@ -334,20 +816,20 @@ anchor_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
 mouse_filter = 2
-amplitude_slider = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Amplitude_Slider")
-phase_slider = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/Phase_Slider")
+amplitude_slider = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Panel/MarginContainer/Amplitude_Slider")
+phase_slider = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/Panel/MarginContainer/Phase_Slider")
 frequency_slider = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/MarginContainer/Knob")
 percentage_label = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/TextureRect/Label2")
 previous_layer_button = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/Wave_Selector/Left_Button")
 next_layer_button = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/Wave_Selector/Left_Button2")
-previous_wave_type = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer/Panel")
-next_wave_type = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer/Panel3")
+previous_wave_type = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/MarginContainer/Panel4/HBoxContainer/Panel")
+next_wave_type = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/MarginContainer/Panel4/HBoxContainer/Panel3")
 curve_addition_type = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/Start_&_Stop")
-selected_wave_texture_rect = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer/Panel2/SelectedWave")
-right_screen = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Right_Screen")
-right_color_rect = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Right_Screen/ColorRect")
-left_screen = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Left_Screen")
-left_color_rect = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Left_Screen/ColorRect")
+selected_wave_texture_rect = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/MarginContainer/Panel4/HBoxContainer/MarginContainer/Panel2/SelectedWave")
+right_screen = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel2/MarginContainer/Right_Screen")
+right_color_rect = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel2/MarginContainer/Right_Screen/ColorRect")
+left_screen = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel/MarginContainer/Left_Screen")
+left_color_rect = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel/MarginContainer/Left_Screen/ColorRect")
 sine_image = ExtResource("17_03ap5")
 square_image = ExtResource("18_kuh44")
 saw_image = ExtResource("19_bnsis")
@@ -356,8 +838,10 @@ triangle_image = ExtResource("20_eet3d")
 [node name="Total_Timer" type="Timer" parent="."]
 wait_time = 60.0
 one_shot = true
+autostart = true
 
 [node name="Last_Input_Timer" type="Timer" parent="."]
+wait_time = 2.0
 one_shot = true
 
 [connection signal="layer_changed" from="Curve" to="." method="_on_curve_layer_changed"]

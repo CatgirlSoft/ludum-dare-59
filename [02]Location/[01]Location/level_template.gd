@@ -3,6 +3,8 @@ extends Control
 @onready var timer: Timer = $Total_Timer
 @onready var last_input_timer: Timer = $Last_Input_Timer
 
+@onready var timer_label: Label = %Timer
+
 @onready var curve: Curve_Class = $Curve
 
 var total_score: float = 0.0
@@ -12,8 +14,6 @@ var can_confirm_score: bool = false
 var target_score: float = 90.0
 var current_score: float
 
-func _ready() -> void:
-	timer.start()
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
@@ -21,6 +21,8 @@ func _input(_event: InputEvent) -> void:
 		can_confirm_score = false
 
 func _process(_delta: float) -> void:
+	timer_label.text = str(timer.time_left).left(2) + ":" + str(timer.time_left).left(5).right(2)
+	
 	if can_confirm_score and (target_score <= current_score):
 
 		print(current_score)
@@ -58,11 +60,12 @@ func _on_last_input_timer_timeout() -> void:
 
 
 #TODO
-# Timer
 # Timer run out
 #
 # Score led
 # 
+# Tutoriel
+#
 # FInish UI 
 #
 # SOUND
