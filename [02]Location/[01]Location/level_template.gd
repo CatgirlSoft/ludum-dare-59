@@ -25,8 +25,12 @@ func _process(_delta: float) -> void:
 	
 	if can_confirm_score and (target_score <= current_score):
 
-		print(current_score)
 		total_score += current_score
+		if current_score > 95:
+			timer.start(timer.time_left + (5))
+		else:
+			timer.start(timer.time_left + (3))
+			
 
 		can_confirm_score = false
 		current_score = 0

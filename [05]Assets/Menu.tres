@@ -1,4 +1,18 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://ca3bhr5g535io"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://ca3bhr5g535io"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86fir"]
+bg_color = Color(0.22670749, 0.22670752, 0.2267074, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.6745098, 0.6745098, 0.6745098, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ogf5"]
 bg_color = Color(0.44437, 0.74, 0.3626, 1)
@@ -38,6 +52,7 @@ Button/colors/font_color = Color(0.05882353, 0.05882353, 0.2627451, 1)
 Button/colors/font_focus_color = Color(0.8818128, 0.5494728, 1.92523e-07, 1)
 Button/colors/font_hover_color = Color(0.88235295, 0.54901963, 0, 1)
 Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/styles/disabled = SubResource("StyleBoxFlat_86fir")
 Button/styles/focus = SubResource("StyleBoxFlat_6ogf5")
 Button/styles/hover = SubResource("StyleBoxFlat_jngh1")
 Button/styles/normal = SubResource("StyleBoxFlat_6ogf5")
