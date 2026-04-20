@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://c6ubctkwsbpu0"]
+[gd_scene load_steps=40 format=3 uid="uid://dkm87h5wtgnxm"]
 
 [ext_resource type="Script" uid="uid://byo5ralnid2xi" path="res://[02]Location/[01]Location/level_template_hard.gd" id="1_nv8b2"]
 [ext_resource type="Texture2D" uid="uid://n254mt8h84id" path="res://[05]Assets/design-01kpn1pgae-1776675476.png" id="2_djuof"]
@@ -95,6 +95,18 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xquba"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nv8b2"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.78431374)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [node name="LevelTemplate" type="Control"]
 layout_mode = 3
@@ -923,6 +935,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nv8b2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
@@ -962,21 +975,26 @@ text = "average accuracy: "
 layout_mode = 2
 theme_override_colors/font_color = Color(0.7133783, 0.762578, 0.98309714, 1)
 theme_override_font_sizes/font_size = 64
-text = "number of curve: "
+text = "number of curves: "
 
 [node name="good_job" type="Label" parent="Panel/VBoxContainer"]
 visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0.7133783, 0.762578, 0.98309714, 1)
-theme_override_font_sizes/font_size = 64
-text = "Good job soldier"
+theme_override_font_sizes/font_size = 32
+text = "amazing job soldier, you have achieved the highest of highs. we will
+arrange a meeting with the leader of our great country in order to
+attribute you with the greatest honors we can. You service will be
+remembered for generations  to come."
 
 [node name="bad_job" type="Label" parent="Panel/VBoxContainer"]
 visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0.7133783, 0.762578, 0.98309714, 1)
-theme_override_font_sizes/font_size = 64
-text = "Bad job soldier"
+theme_override_font_sizes/font_size = 32
+text = "soldier, this failure may cost us the war.  being unprepared for such a
+challenging task was your downfall, and you will be expatriated at our
+earliest convenience. we hope you won't miss your family too much."
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -988,7 +1006,7 @@ theme_override_constants/margin_bottom = 20
 [node name="Button" type="Button" parent="Panel/VBoxContainer/MarginContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "Menu"
+text = "go back to main Menu"
 
 [connection signal="layer_changed" from="Curve" to="." method="_on_curve_layer_changed"]
 [connection signal="score_changed" from="Curve" to="." method="_on_curve_score_changed"]
