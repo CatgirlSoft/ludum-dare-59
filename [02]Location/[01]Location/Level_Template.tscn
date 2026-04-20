@@ -782,11 +782,11 @@ text = "The curve on your right is
 your target. you must find
 a way to match it using the
 screen and dials on your left.
-  Failure to match too many
-  curves will result in your
-  immediate expatriation, for
+  Failure to match a single
+   curve will result in your
+   immediate expatriation, for
   we cannot afford inefficient
-  soldiers.      "
+    soldiers.      "
 
 [node name="Label2" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/TextureRect"]
 visible = false
