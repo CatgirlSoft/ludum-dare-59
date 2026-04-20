@@ -29,6 +29,8 @@ extends Control
 @export var left_screen: Control
 @export var left_color_rect: ColorRect
 
+@export var progress_bar: TextureProgressBar
+
 @export_group("Wave_Images")
 @export var sine_image: Texture2D
 @export var square_image: Texture2D
@@ -303,6 +305,7 @@ func score() -> float:
 	var similarity = compare(samples, target)
 	var percent = similarity * 100.0
 	percentage_label.text = "Similarity:\n " + str(percent).pad_decimals(2) + "%"
+	progress_bar.value = percent
 	return percent
 
 func _refresh() -> void:
