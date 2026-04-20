@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bd3l71r52vs8h"]
+[gd_scene load_steps=9 format=3 uid="uid://bd3l71r52vs8h"]
 
 [ext_resource type="Texture2D" uid="uid://dnvx7wj4bty40" path="res://[05]Assets/Art/patern.png" id="1_0dvh7"]
 [ext_resource type="Script" uid="uid://dbglhm2wiwnix" path="res://[02]Location/[01]Location/menu.gd" id="1_wcysk"]
 [ext_resource type="Script" path="res://[02]Location/[01]Location/sprite_2d.gd" id="2_rgne3"]
 [ext_resource type="Script" uid="uid://chyb34itd0v2o" path="res://[02]Location/[01]Location/start_menu.gd" id="3_rgne3"]
 [ext_resource type="Script" path="res://[02]Location/[01]Location/credit.gd" id="5_1d7ik"]
+[ext_resource type="FontFile" uid="uid://05mbiovv7jff" path="res://[05]Assets/font/Roboto-Regular.ttf" id="6_4u3qu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1d7ik"]
 content_margin_left = 0.0
@@ -253,14 +254,14 @@ vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="Credit/MarginContainer/MarginContainer2/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("FontFile_1d7ik")
+theme_override_fonts/font = ExtResource("6_4u3qu")
 theme_override_font_sizes/font_size = 32
 text = "Rizvolution"
 vertical_alignment = 1
 
 [node name="Label4" type="Label" parent="Credit/MarginContainer/MarginContainer2/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("FontFile_1d7ik")
+theme_override_fonts/font = ExtResource("6_4u3qu")
 theme_override_font_sizes/font_size = 32
 text = "Lisieshy"
 vertical_alignment = 1
@@ -279,14 +280,14 @@ vertical_alignment = 1
 
 [node name="Label6" type="Label" parent="Credit/MarginContainer/MarginContainer2/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("FontFile_1d7ik")
+theme_override_fonts/font = ExtResource("6_4u3qu")
 theme_override_font_sizes/font_size = 32
 text = "Lisieshy"
 vertical_alignment = 1
 
 [node name="Label7" type="Label" parent="Credit/MarginContainer/MarginContainer2/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("FontFile_1d7ik")
+theme_override_fonts/font = ExtResource("6_4u3qu")
 theme_override_font_sizes/font_size = 32
 text = "Rizvolution"
 vertical_alignment = 1
@@ -307,14 +308,14 @@ vertical_alignment = 1
 
 [node name="Label4" type="Label" parent="Credit/MarginContainer/MarginContainer2/MarginContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("FontFile_1d7ik")
+theme_override_fonts/font = ExtResource("6_4u3qu")
 theme_override_font_sizes/font_size = 32
 text = "Meta-link"
 vertical_alignment = 1
 
 [node name="Label6" type="Label" parent="Credit/MarginContainer/MarginContainer2/MarginContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("FontFile_1d7ik")
+theme_override_fonts/font = ExtResource("6_4u3qu")
 theme_override_font_sizes/font_size = 32
 text = "PontVariable240"
 vertical_alignment = 1
@@ -327,14 +328,14 @@ vertical_alignment = 1
 
 [node name="Label5" type="Label" parent="Credit/MarginContainer/MarginContainer2/MarginContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("FontFile_1d7ik")
+theme_override_fonts/font = ExtResource("6_4u3qu")
 theme_override_font_sizes/font_size = 32
 text = "Tokai Teio"
 vertical_alignment = 1
 
 [node name="Label7" type="Label" parent="Credit/MarginContainer/MarginContainer2/MarginContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("FontFile_1d7ik")
+theme_override_fonts/font = ExtResource("6_4u3qu")
 theme_override_font_sizes/font_size = 32
 text = "Pecorine"
 vertical_alignment = 1
