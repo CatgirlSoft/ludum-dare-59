@@ -6,6 +6,7 @@ extends Control
 @onready var timer_label: Label = %Timer
 
 @onready var curve: Curve_Class = $Curve
+@onready var texture_rect: TextureRect = $MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/Panel2/TextureRect
 
 var total_score: float = 0.0
 var level: int = 1
@@ -61,6 +62,7 @@ func _on_curve_score_changed(new_score: float) -> void:
 
 func _on_last_input_timer_timeout() -> void:
 	can_confirm_score = true
+	
 
 
 #TODO

@@ -40,14 +40,14 @@ shader = ExtResource("3_j5b4o")
 shader_parameter/line_width = 1.0
 shader_parameter/cell_size = 64.0
 shader_parameter/line_color = Color(0.47440952, 0.18958753, 0.036105763, 1)
-shader_parameter/grid_offset = Vector2(67.92, 28.02)
+shader_parameter/grid_offset = Vector2(51.005, 23.48)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g3gpu"]
 shader = ExtResource("3_j5b4o")
 shader_parameter/line_width = 1.0
 shader_parameter/cell_size = 64.0
 shader_parameter/line_color = Color(0.6509804, 0.27058825, 0.06666667, 1)
-shader_parameter/grid_offset = Vector2(35.92, 60.02)
+shader_parameter/grid_offset = Vector2(19.005, 55.48)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bnsis"]
 shader = ExtResource("2_kuh44")
@@ -60,14 +60,14 @@ shader = ExtResource("3_j5b4o")
 shader_parameter/line_width = 1.0
 shader_parameter/cell_size = 64.0
 shader_parameter/line_color = Color(0.47440952, 0.18958753, 0.036105763, 1)
-shader_parameter/grid_offset = Vector2(59.47, 27.92)
+shader_parameter/grid_offset = Vector2(76.48, 23.5)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v0786"]
 shader = ExtResource("3_j5b4o")
 shader_parameter/line_width = 1.0
 shader_parameter/cell_size = 64.0
 shader_parameter/line_color = Color(0.62455577, 0.25783578, 0.06262675, 1)
-shader_parameter/grid_offset = Vector2(27.47, 59.92)
+shader_parameter/grid_offset = Vector2(44.48, 55.5)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j5b4o"]
 shader = ExtResource("2_kuh44")
