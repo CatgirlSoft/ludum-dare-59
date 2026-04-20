@@ -310,7 +310,7 @@ theme_override_constants/margin_bottom = 4
 layout_mode = 2
 theme_override_styles/panel = ExtResource("6_0l1wn")
 
-[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer/Panel2/MarginContainer/Panel"]
+[node name="LayerLabel" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer/Panel2/MarginContainer/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -786,11 +786,11 @@ text = "The curve on your right is
 your target. you must find
 a way to match it using the
 screen and dials on your left.
-  Failure to match too many
-  curves will result in your
-  immediate expatriation, for
+  Failure to match a single
+   curve will result in your
+   immediate expatriation, for
   we cannot afford inefficient
-  soldiers.      "
+    soldiers.      "
 
 [node name="Label2" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/TextureRect"]
 visible = false
@@ -856,7 +856,7 @@ texture_progress = ExtResource("23_g3gpu")
 tint_under = Color(0.66740394, 1.540184e-06, 0.403204, 1)
 tint_over = Color(0.81710166, 6.160736e-06, 0.5315976, 1)
 
-[node name="Curve" parent="." node_paths=PackedStringArray("amplitude_slider", "phase_slider", "frequency_slider", "percentage_label", "previous_layer_button", "next_layer_button", "previous_wave_type", "next_wave_type", "curve_addition_type", "selected_wave_texture_rect", "right_screen", "right_color_rect", "left_screen", "left_color_rect", "combination_add_label", "progress_bar") instance=ExtResource("16_1qimg")]
+[node name="Curve" parent="." node_paths=PackedStringArray("amplitude_slider", "phase_slider", "frequency_slider", "percentage_label", "selected_layer_label", "previous_layer_button", "next_layer_button", "previous_wave_type", "next_wave_type", "curve_addition_type", "selected_wave_texture_rect", "right_screen", "right_color_rect", "left_screen", "left_color_rect", "combination_add_label", "progress_bar") instance=ExtResource("16_1qimg")]
 layout_mode = 1
 anchors_preset = 0
 anchor_right = 0.0
@@ -868,6 +868,7 @@ amplitude_slider = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContai
 phase_slider = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/Panel/MarginContainer/Phase_Slider")
 frequency_slider = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/MarginContainer/Panel/MarginContainer/Knob")
 percentage_label = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/TextureRect/Label2")
+selected_layer_label = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer/Panel2/MarginContainer/Panel/LayerLabel")
 previous_layer_button = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/Wave_Selector/Left_Button")
 next_layer_button = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/Wave_Selector/Left_Button2")
 previous_wave_type = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/MarginContainer/Panel4/HBoxContainer/Panel")

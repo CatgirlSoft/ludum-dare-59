@@ -14,6 +14,7 @@ extends Control
 
 @export var percentage_label: Label
 
+@export var selected_layer_label: Label
 @export var previous_layer_button: Button
 @export var next_layer_button: Button
 
@@ -284,6 +285,7 @@ func _update_ui() -> void:
 	frequency_slider.value = layer.frequency
 	phase_slider.value = layer.phase
 	_update_wave_texture(player_layers[current_layer_index].wave_type)
+	selected_layer_label.text = str(current_layer_index)
 	if current_layer_index < player_ops.size():
 		combination_add_label.text = CombineOp.find_key(player_ops[current_layer_index])
 	else:
