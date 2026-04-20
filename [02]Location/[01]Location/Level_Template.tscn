@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bp16nh4e1u7rh"]
+[gd_scene load_steps=40 format=3 uid="uid://bp16nh4e1u7rh"]
 
 [ext_resource type="Script" uid="uid://6eup5vgsmqxd" path="res://[02]Location/[01]Location/level_template.gd" id="1_kuh44"]
 [ext_resource type="Texture2D" uid="uid://dm0cbnswnon00" path="res://[05]Assets/Art/VSlider_button.png" id="2_306j3"]
@@ -17,8 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://d23qku0vb5gfo" path="res://[05]Assets/Art/Right_arrow_pressed.png" id="7_ebe6o"]
 [ext_resource type="Texture2D" uid="uid://b8c5bw5exvvne" path="res://[05]Assets/Art/wave_type_bg.png" id="8_1qimg"]
 [ext_resource type="PackedScene" uid="uid://boiseh2yw3m8j" path="res://[06]Common/Knob.tscn" id="10_b4b5q"]
-[ext_resource type="Texture2D" uid="uid://bhcu7s0gdtjje" path="res://[05]Assets/Art/switch_on.png" id="10_l6s12"]
-[ext_resource type="Texture2D" uid="uid://cmc0xb6imitle" path="res://[05]Assets/Art/switch_off.png" id="11_02xan"]
 [ext_resource type="Texture2D" uid="uid://cfc6ljt28o6w5" path="res://[05]Assets/Art/post-it.png" id="14_2om8t"]
 [ext_resource type="PackedScene" uid="uid://bq0xbvk3ghk1s" path="res://[03]UI/Curve.tscn" id="16_1qimg"]
 [ext_resource type="Texture2D" uid="uid://b7013wp70u5vr" path="res://[05]Assets/Art/sine.png" id="17_03ap5"]
@@ -26,6 +24,9 @@
 [ext_resource type="Texture2D" uid="uid://b6l5dykpjohwv" path="res://[05]Assets/knob.png" id="19_0l1wn"]
 [ext_resource type="Texture2D" uid="uid://cyyr5lrufcpco" path="res://[05]Assets/Art/saw.png" id="19_bnsis"]
 [ext_resource type="Texture2D" uid="uid://cs4jgsb2g8yqg" path="res://[05]Assets/Art/triangle.png" id="20_eet3d"]
+[ext_resource type="Texture2D" uid="uid://fprlow1bkvg5" path="res://[05]Assets/operator_unpressed.png" id="20_yxo4l"]
+[ext_resource type="Texture2D" uid="uid://bc36gtiane1mk" path="res://[05]Assets/operator_pressed.png" id="21_7q4n6"]
+[ext_resource type="Texture2D" uid="uid://dmy2cfgjk52wm" path="res://[05]Assets/operator_dissable.png" id="22_mcyil"]
 [ext_resource type="Texture2D" uid="uid://b43va6cuyjmiw" path="res://[05]Assets/progresse_bar.png" id="23_g3gpu"]
 [ext_resource type="Texture2D" uid="uid://ccdxas7v2jkne" path="res://[05]Assets/led.png" id="24_v0786"]
 
@@ -756,8 +757,9 @@ size_flags_vertical = 4
 size_flags_stretch_ratio = 0.32
 mouse_filter = 2
 disabled = true
-texture_normal = ExtResource("10_l6s12")
-texture_pressed = ExtResource("11_02xan")
+texture_normal = ExtResource("20_yxo4l")
+texture_pressed = ExtResource("21_7q4n6")
+texture_disabled = ExtResource("22_mcyil")
 
 [node name="Dialogue_Box" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom"]
 self_modulate = Color(1, 1, 1, 0)

@@ -337,7 +337,7 @@ text = "Pecorine"
 vertical_alignment = 1
 
 [connection signal="pressed" from="StartMenu/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/Play" to="StartMenu" method="_on_play_pressed"]
-[connection signal="pressed" from="StartMenu/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/Play2" to="StartMenu" method="_on_play_pressed"]
+[connection signal="pressed" from="StartMenu/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/Play2" to="StartMenu" method="_on_play_2_pressed"]
 [connection signal="pressed" from="StartMenu/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/VBoxContainer/Option" to="StartMenu" method="_on_option_pressed"]
 [connection signal="pressed" from="StartMenu/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/VBoxContainer/Credit" to="StartMenu" method="_on_credit_pressed"]
 [connection signal="pressed" from="StartMenu/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/VBoxContainer/Quit" to="StartMenu" method="_on_quit_pressed"]
