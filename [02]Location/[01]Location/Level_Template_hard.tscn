@@ -1,33 +1,33 @@
-[gd_scene load_steps=39 format=3 uid="uid://bp16nh4e1u7rh"]
+[gd_scene load_steps=39 format=3 uid="uid://c6ubctkwsbpu0"]
 
-[ext_resource type="Script" uid="uid://6eup5vgsmqxd" path="res://[02]Location/[01]Location/level_template.gd" id="1_kuh44"]
-[ext_resource type="Texture2D" uid="uid://dm0cbnswnon00" path="res://[05]Assets/Art/VSlider_button.png" id="2_306j3"]
-[ext_resource type="Texture2D" uid="uid://n254mt8h84id" path="res://[05]Assets/design-01kpn1pgae-1776675476.png" id="2_eet3d"]
-[ext_resource type="Shader" uid="uid://dxsyctgg0oa50" path="res://[03]UI/wave.gdshader" id="2_kuh44"]
-[ext_resource type="Texture2D" uid="uid://cdu5nl5k0oxfp" path="res://[05]Assets/Art/HSlider_button.png" id="3_306j3"]
-[ext_resource type="FontFile" uid="uid://dkpw8p71g8e4" path="res://[05]Assets/font/7SEGMENTALDIGITALDISPLAY.ttf" id="3_bnsis"]
-[ext_resource type="Shader" uid="uid://c37lyys318tw2" path="res://[02]Location/[01]Location/Screen_shader.gdshader" id="3_j5b4o"]
-[ext_resource type="Texture2D" uid="uid://c3x67pkseytbp" path="res://[05]Assets/Art/VTick.png" id="3_ptfii"]
-[ext_resource type="Texture2D" uid="uid://cnb4gyvafsfni" path="res://[05]Assets/Art/HTick.png" id="4_ebe6o"]
-[ext_resource type="Texture2D" uid="uid://dt0qwnv55w3ul" path="res://[05]Assets/Art/Left_arrow.png" id="4_rlgnu"]
-[ext_resource type="Texture2D" uid="uid://lwvoebyp7yui" path="res://[05]Assets/Art/Left_arrow_pressed.png" id="5_2onyg"]
-[ext_resource type="StyleBox" uid="uid://csghjfh0t67jy" path="res://[02]Location/[01]Location/Metal_Border.tres" id="5_o7vm5"]
-[ext_resource type="StyleBox" uid="uid://dh01avl7yr0lr" path="res://[02]Location/[01]Location/Black_screen.tres" id="6_0l1wn"]
-[ext_resource type="Texture2D" uid="uid://c4nv0q02xomf5" path="res://[05]Assets/Art/Right_arrow.png" id="6_83yxr"]
-[ext_resource type="Texture2D" uid="uid://d23qku0vb5gfo" path="res://[05]Assets/Art/Right_arrow_pressed.png" id="7_ebe6o"]
-[ext_resource type="Texture2D" uid="uid://b8c5bw5exvvne" path="res://[05]Assets/Art/wave_type_bg.png" id="8_1qimg"]
-[ext_resource type="PackedScene" uid="uid://boiseh2yw3m8j" path="res://[06]Common/Knob.tscn" id="10_b4b5q"]
-[ext_resource type="Texture2D" uid="uid://bhcu7s0gdtjje" path="res://[05]Assets/Art/switch_on.png" id="10_l6s12"]
-[ext_resource type="Texture2D" uid="uid://cmc0xb6imitle" path="res://[05]Assets/Art/switch_off.png" id="11_02xan"]
-[ext_resource type="Texture2D" uid="uid://cfc6ljt28o6w5" path="res://[05]Assets/Art/post-it.png" id="14_2om8t"]
-[ext_resource type="PackedScene" uid="uid://bq0xbvk3ghk1s" path="res://[03]UI/Curve.tscn" id="16_1qimg"]
-[ext_resource type="Texture2D" uid="uid://b7013wp70u5vr" path="res://[05]Assets/Art/sine.png" id="17_03ap5"]
-[ext_resource type="Texture2D" uid="uid://d0jiiplcco0b6" path="res://[05]Assets/Art/square.png" id="18_kuh44"]
-[ext_resource type="Texture2D" uid="uid://b6l5dykpjohwv" path="res://[05]Assets/knob.png" id="19_0l1wn"]
-[ext_resource type="Texture2D" uid="uid://cyyr5lrufcpco" path="res://[05]Assets/Art/saw.png" id="19_bnsis"]
-[ext_resource type="Texture2D" uid="uid://cs4jgsb2g8yqg" path="res://[05]Assets/Art/triangle.png" id="20_eet3d"]
-[ext_resource type="Texture2D" uid="uid://b43va6cuyjmiw" path="res://[05]Assets/progresse_bar.png" id="23_g3gpu"]
-[ext_resource type="Texture2D" uid="uid://ccdxas7v2jkne" path="res://[05]Assets/led.png" id="24_v0786"]
+[ext_resource type="Script" uid="uid://byo5ralnid2xi" path="res://[02]Location/[01]Location/level_template_hard.gd" id="1_nv8b2"]
+[ext_resource type="Texture2D" uid="uid://n254mt8h84id" path="res://[05]Assets/design-01kpn1pgae-1776675476.png" id="2_djuof"]
+[ext_resource type="StyleBox" uid="uid://csghjfh0t67jy" path="res://[02]Location/[01]Location/Metal_Border.tres" id="3_jugea"]
+[ext_resource type="Shader" uid="uid://c37lyys318tw2" path="res://[02]Location/[01]Location/Screen_shader.gdshader" id="4_1tll6"]
+[ext_resource type="Shader" uid="uid://dxsyctgg0oa50" path="res://[03]UI/wave.gdshader" id="5_qw12t"]
+[ext_resource type="StyleBox" uid="uid://dh01avl7yr0lr" path="res://[02]Location/[01]Location/Black_screen.tres" id="6_0vxcv"]
+[ext_resource type="FontFile" uid="uid://dkpw8p71g8e4" path="res://[05]Assets/font/7SEGMENTALDIGITALDISPLAY.ttf" id="7_cpjok"]
+[ext_resource type="Texture2D" uid="uid://dm0cbnswnon00" path="res://[05]Assets/Art/VSlider_button.png" id="8_5koil"]
+[ext_resource type="Texture2D" uid="uid://c3x67pkseytbp" path="res://[05]Assets/Art/VTick.png" id="9_4e3ls"]
+[ext_resource type="Texture2D" uid="uid://cdu5nl5k0oxfp" path="res://[05]Assets/Art/HSlider_button.png" id="10_wpe5b"]
+[ext_resource type="Texture2D" uid="uid://cnb4gyvafsfni" path="res://[05]Assets/Art/HTick.png" id="11_6ttri"]
+[ext_resource type="Texture2D" uid="uid://dt0qwnv55w3ul" path="res://[05]Assets/Art/Left_arrow.png" id="12_wkhb4"]
+[ext_resource type="Texture2D" uid="uid://lwvoebyp7yui" path="res://[05]Assets/Art/Left_arrow_pressed.png" id="13_vmoa2"]
+[ext_resource type="Texture2D" uid="uid://b8c5bw5exvvne" path="res://[05]Assets/Art/wave_type_bg.png" id="14_vcxk8"]
+[ext_resource type="Texture2D" uid="uid://b7013wp70u5vr" path="res://[05]Assets/Art/sine.png" id="15_1m0l4"]
+[ext_resource type="Texture2D" uid="uid://c4nv0q02xomf5" path="res://[05]Assets/Art/Right_arrow.png" id="16_syqoa"]
+[ext_resource type="Texture2D" uid="uid://d23qku0vb5gfo" path="res://[05]Assets/Art/Right_arrow_pressed.png" id="17_uduvu"]
+[ext_resource type="PackedScene" uid="uid://boiseh2yw3m8j" path="res://[06]Common/Knob.tscn" id="18_aeyv7"]
+[ext_resource type="Texture2D" uid="uid://b6l5dykpjohwv" path="res://[05]Assets/knob.png" id="19_qckv6"]
+[ext_resource type="Texture2D" uid="uid://bhcu7s0gdtjje" path="res://[05]Assets/Art/switch_on.png" id="20_d5nku"]
+[ext_resource type="Texture2D" uid="uid://cmc0xb6imitle" path="res://[05]Assets/Art/switch_off.png" id="21_tipkp"]
+[ext_resource type="Texture2D" uid="uid://cfc6ljt28o6w5" path="res://[05]Assets/Art/post-it.png" id="22_nv31v"]
+[ext_resource type="Texture2D" uid="uid://b43va6cuyjmiw" path="res://[05]Assets/progresse_bar.png" id="23_wtxrl"]
+[ext_resource type="Texture2D" uid="uid://ccdxas7v2jkne" path="res://[05]Assets/led.png" id="24_41dbt"]
+[ext_resource type="PackedScene" uid="uid://bq0xbvk3ghk1s" path="res://[03]UI/Curve.tscn" id="25_nqbpc"]
+[ext_resource type="Texture2D" uid="uid://d0jiiplcco0b6" path="res://[05]Assets/Art/square.png" id="26_vkh7s"]
+[ext_resource type="Texture2D" uid="uid://cyyr5lrufcpco" path="res://[05]Assets/Art/saw.png" id="27_ox62p"]
+[ext_resource type="Texture2D" uid="uid://cs4jgsb2g8yqg" path="res://[05]Assets/Art/triangle.png" id="28_4g7dn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5b4o"]
 bg_color = Color(0.14697002, 0.23, 0.1426, 1)
@@ -37,41 +37,41 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_o7vm5"]
-shader = ExtResource("3_j5b4o")
+shader = ExtResource("4_1tll6")
 shader_parameter/line_width = 1.0
 shader_parameter/cell_size = 64.0
 shader_parameter/line_color = Color(0.47440952, 0.18958753, 0.036105763, 1)
 shader_parameter/grid_offset = Vector2(51.005, 23.48)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g3gpu"]
-shader = ExtResource("3_j5b4o")
+shader = ExtResource("4_1tll6")
 shader_parameter/line_width = 1.0
 shader_parameter/cell_size = 64.0
 shader_parameter/line_color = Color(0.6509804, 0.27058825, 0.06666667, 1)
 shader_parameter/grid_offset = Vector2(19.005, 55.48)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bnsis"]
-shader = ExtResource("2_kuh44")
+shader = ExtResource("5_qw12t")
 shader_parameter/sample_count = 100
 shader_parameter/line_color = Color(0, 1, 0, 1)
 shader_parameter/line_thickness = 0.008
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0l1wn"]
-shader = ExtResource("3_j5b4o")
+shader = ExtResource("4_1tll6")
 shader_parameter/line_width = 1.0
 shader_parameter/cell_size = 64.0
 shader_parameter/line_color = Color(0.47440952, 0.18958753, 0.036105763, 1)
 shader_parameter/grid_offset = Vector2(76.48, 23.5)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v0786"]
-shader = ExtResource("3_j5b4o")
+shader = ExtResource("4_1tll6")
 shader_parameter/line_width = 1.0
 shader_parameter/cell_size = 64.0
 shader_parameter/line_color = Color(0.62455577, 0.25783578, 0.06262675, 1)
 shader_parameter/grid_offset = Vector2(44.48, 55.5)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j5b4o"]
-shader = ExtResource("2_kuh44")
+shader = ExtResource("5_qw12t")
 shader_parameter/sample_count = 100
 shader_parameter/line_color = Color(0, 1, 0, 1)
 shader_parameter/line_thickness = 0.008
@@ -103,7 +103,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_kuh44")
+script = ExtResource("1_nv8b2")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -115,7 +115,7 @@ grow_vertical = 2
 
 [node name="Panel" type="TextureRect" parent="MarginContainer"]
 layout_mode = 2
-texture = ExtResource("2_eet3d")
+texture = ExtResource("2_djuof")
 expand_mode = 1
 stretch_mode = 6
 flip_v = true
@@ -144,7 +144,7 @@ size_flags_stretch_ratio = 1.21
 [node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = ExtResource("5_o7vm5")
+theme_override_styles/panel = ExtResource("3_jugea")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel"]
 layout_mode = 1
@@ -206,7 +206,7 @@ size_flags_stretch_ratio = 0.52
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
-theme_override_styles/panel = ExtResource("5_o7vm5")
+theme_override_styles/panel = ExtResource("3_jugea")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/Panel3"]
 layout_mode = 1
@@ -224,7 +224,7 @@ theme_override_constants/margin_bottom = 5
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
-theme_override_styles/panel = ExtResource("6_0l1wn")
+theme_override_styles/panel = ExtResource("6_0vxcv")
 
 [node name="Timer" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/Panel3/MarginContainer/LED"]
 unique_name_in_owner = true
@@ -235,7 +235,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.74, 0.3626, 0.3626, 1)
-theme_override_fonts/font = ExtResource("3_bnsis")
+theme_override_fonts/font = ExtResource("7_cpjok")
 theme_override_font_sizes/font_size = 48
 text = "99:99"
 horizontal_alignment = 1
@@ -256,7 +256,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 3.33
-theme_override_styles/panel = ExtResource("5_o7vm5")
+theme_override_styles/panel = ExtResource("3_jugea")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer/Panel"]
 layout_mode = 1
@@ -272,7 +272,7 @@ theme_override_constants/margin_bottom = 4
 
 [node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer/Panel/MarginContainer"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("6_0l1wn")
+theme_override_styles/panel = ExtResource("6_0vxcv")
 
 [node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer/Panel/MarginContainer/Panel"]
 layout_mode = 1
@@ -282,7 +282,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.7137255, 0.34901962, 0.34901962, 1)
-theme_override_fonts/font = ExtResource("3_bnsis")
+theme_override_fonts/font = ExtResource("7_cpjok")
 theme_override_font_sizes/font_size = 32
 text = "1"
 horizontal_alignment = 1
@@ -293,7 +293,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 3.33
-theme_override_styles/panel = ExtResource("5_o7vm5")
+theme_override_styles/panel = ExtResource("3_jugea")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer/Panel2"]
 layout_mode = 1
@@ -309,7 +309,7 @@ theme_override_constants/margin_bottom = 4
 
 [node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer/Panel2/MarginContainer"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("6_0l1wn")
+theme_override_styles/panel = ExtResource("6_0vxcv")
 
 [node name="LayerLabel" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer/Panel2/MarginContainer/Panel"]
 layout_mode = 1
@@ -319,7 +319,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.7137255, 0.34901962, 0.34901962, 1)
-theme_override_fonts/font = ExtResource("3_bnsis")
+theme_override_fonts/font = ExtResource("7_cpjok")
 theme_override_font_sizes/font_size = 32
 text = "1"
 horizontal_alignment = 1
@@ -335,7 +335,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 3.33
-theme_override_styles/panel = ExtResource("5_o7vm5")
+theme_override_styles/panel = ExtResource("3_jugea")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer2/Panel"]
 layout_mode = 1
@@ -351,7 +351,7 @@ theme_override_constants/margin_bottom = 4
 
 [node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer2/Panel/MarginContainer"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("6_0l1wn")
+theme_override_styles/panel = ExtResource("6_0vxcv")
 
 [node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer2/Panel/MarginContainer/Panel"]
 layout_mode = 1
@@ -361,7 +361,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.7137255, 0.34901962, 0.34901962, 1)
-theme_override_fonts/font = ExtResource("3_bnsis")
+theme_override_fonts/font = ExtResource("7_cpjok")
 theme_override_font_sizes/font_size = 32
 text = "1"
 horizontal_alignment = 1
@@ -373,7 +373,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 3.33
-theme_override_styles/panel = ExtResource("5_o7vm5")
+theme_override_styles/panel = ExtResource("3_jugea")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer2/Panel2"]
 layout_mode = 1
@@ -389,7 +389,7 @@ theme_override_constants/margin_bottom = 4
 
 [node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer2/Panel2/MarginContainer"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("6_0l1wn")
+theme_override_styles/panel = ExtResource("6_0vxcv")
 
 [node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Screen_Separation/HBoxContainer/VBoxContainer2/Panel2/MarginContainer/Panel"]
 layout_mode = 1
@@ -399,7 +399,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.7137255, 0.34901962, 0.34901962, 1)
-theme_override_fonts/font = ExtResource("3_bnsis")
+theme_override_fonts/font = ExtResource("7_cpjok")
 theme_override_font_sizes/font_size = 32
 text = "1"
 horizontal_alignment = 1
@@ -414,8 +414,6 @@ size_flags_stretch_ratio = 2.43
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-mouse_filter = 2
-disabled = true
 text = "next
 layer"
 
@@ -423,8 +421,6 @@ layer"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-mouse_filter = 2
-disabled = true
 text = "previous
 layer"
 
@@ -436,7 +432,7 @@ size_flags_vertical = 3
 [node name="Panel2" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = ExtResource("5_o7vm5")
+theme_override_styles/panel = ExtResource("3_jugea")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel2"]
 layout_mode = 1
@@ -496,7 +492,7 @@ theme_override_constants/separation = 25
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.22
-theme_override_styles/panel = ExtResource("5_o7vm5")
+theme_override_styles/panel = ExtResource("3_jugea")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Panel"]
 layout_mode = 1
@@ -515,9 +511,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.3
 theme_override_constants/tick_offset = 10
-theme_override_icons/grabber = ExtResource("2_306j3")
-theme_override_icons/grabber_highlight = ExtResource("2_306j3")
-theme_override_icons/tick = ExtResource("3_ptfii")
+theme_override_icons/grabber = ExtResource("8_5koil")
+theme_override_icons/grabber_highlight = ExtResource("8_5koil")
+theme_override_icons/tick = ExtResource("9_4e3ls")
 theme_override_styles/slider = SubResource("StyleBoxFlat_2om8t")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_1qimg")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_xquba")
@@ -537,7 +533,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.3
-theme_override_styles/panel = ExtResource("5_o7vm5")
+theme_override_styles/panel = ExtResource("3_jugea")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/Panel"]
 layout_mode = 1
@@ -556,9 +552,9 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.3
 theme_override_constants/tick_offset = 10
-theme_override_icons/grabber = ExtResource("3_306j3")
-theme_override_icons/grabber_highlight = ExtResource("3_306j3")
-theme_override_icons/tick = ExtResource("4_ebe6o")
+theme_override_icons/grabber = ExtResource("10_wpe5b")
+theme_override_icons/grabber_highlight = ExtResource("10_wpe5b")
+theme_override_icons/tick = ExtResource("11_6ttri")
 theme_override_styles/slider = SubResource("StyleBoxFlat_2om8t")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_1qimg")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_xquba")
@@ -580,7 +576,7 @@ theme_override_constants/margin_right = 60
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-theme_override_styles/panel = ExtResource("5_o7vm5")
+theme_override_styles/panel = ExtResource("3_jugea")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/MarginContainer/Panel4"]
 layout_mode = 1
@@ -599,8 +595,8 @@ custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
-texture_normal = ExtResource("4_rlgnu")
-texture_pressed = ExtResource("5_2onyg")
+texture_normal = ExtResource("12_wkhb4")
+texture_pressed = ExtResource("13_vmoa2")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/MarginContainer/Panel4/HBoxContainer"]
 layout_mode = 2
@@ -613,7 +609,7 @@ theme_override_constants/margin_bottom = 2
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("8_1qimg")
+texture = ExtResource("14_vcxk8")
 expand_mode = 2
 
 [node name="SelectedWave" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/MarginContainer/Panel4/HBoxContainer/MarginContainer/Panel2"]
@@ -623,7 +619,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("17_03ap5")
+texture = ExtResource("15_1m0l4")
 expand_mode = 2
 
 [node name="Panel3" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/MarginContainer/Panel4/HBoxContainer"]
@@ -631,8 +627,8 @@ custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
-texture_normal = ExtResource("6_83yxr")
-texture_pressed = ExtResource("7_ebe6o")
+texture_normal = ExtResource("16_syqoa")
+texture_pressed = ExtResource("17_uduvu")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control"]
 layout_mode = 2
@@ -647,7 +643,7 @@ theme_override_constants/margin_right = 10
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 2
-theme_override_styles/panel = ExtResource("5_o7vm5")
+theme_override_styles/panel = ExtResource("3_jugea")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/MarginContainer/Panel"]
 custom_minimum_size = Vector2(50, 50)
@@ -666,13 +662,13 @@ grow_vertical = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 8
 
-[node name="Knob" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/MarginContainer/Panel/MarginContainer" instance=ExtResource("10_b4b5q")]
+[node name="Knob" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/MarginContainer/Panel/MarginContainer" instance=ExtResource("18_aeyv7")]
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
-texture = ExtResource("19_0l1wn")
+texture = ExtResource("19_qckv6")
 texture_scale = Vector2(0.7, 0.7)
 tick_color = Color(0.39607844, 0.18039216, 0.105882354, 1)
 tick_size = 3.0
@@ -688,7 +684,7 @@ custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.65
-theme_override_styles/panel = ExtResource("5_o7vm5")
+theme_override_styles/panel = ExtResource("3_jugea")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/MarginContainer2/Wave_Selected"]
 layout_mode = 1
@@ -704,7 +700,7 @@ theme_override_constants/margin_bottom = 8
 
 [node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/MarginContainer2/Wave_Selected/MarginContainer"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("6_0l1wn")
+theme_override_styles/panel = ExtResource("6_0vxcv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/MarginContainer2/Wave_Selected/MarginContainer/Panel"]
 layout_mode = 1
@@ -718,7 +714,7 @@ alignment = 1
 [node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/MarginContainer2/Wave_Selected/MarginContainer/Panel/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.72156864, 0.3529412, 0.3529412, 1)
-theme_override_fonts/font = ExtResource("3_bnsis")
+theme_override_fonts/font = ExtResource("7_cpjok")
 theme_override_font_sizes/font_size = 25
 text = "Opperation"
 horizontal_alignment = 1
@@ -727,7 +723,7 @@ vertical_alignment = 1
 [node name="OperationTypeLabel" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/MarginContainer2/Wave_Selected/MarginContainer/Panel/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.72156864, 0.3529412, 0.3529412, 1)
-theme_override_fonts/font = ExtResource("3_bnsis")
+theme_override_fonts/font = ExtResource("7_cpjok")
 theme_override_font_sizes/font_size = 25
 text = "Undefined"
 horizontal_alignment = 1
@@ -736,7 +732,7 @@ vertical_alignment = 1
 [node name="Panel2" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = ExtResource("5_o7vm5")
+theme_override_styles/panel = ExtResource("3_jugea")
 
 [node name="Start_&_Stop" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/Panel2"]
 layout_mode = 1
@@ -754,10 +750,8 @@ grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 size_flags_stretch_ratio = 0.32
-mouse_filter = 2
-disabled = true
-texture_normal = ExtResource("10_l6s12")
-texture_pressed = ExtResource("11_02xan")
+texture_normal = ExtResource("20_d5nku")
+texture_pressed = ExtResource("21_tipkp")
 
 [node name="Dialogue_Box" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom"]
 self_modulate = Color(1, 1, 1, 0)
@@ -776,7 +770,7 @@ offset_right = -19.040009
 offset_bottom = 19.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("14_2om8t")
+texture = ExtResource("22_nv31v")
 stretch_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/TextureRect"]
@@ -819,7 +813,7 @@ offset_right = -24.0
 offset_bottom = 109.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_styles/panel = ExtResource("5_o7vm5")
+theme_override_styles/panel = ExtResource("3_jugea")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/Panel"]
 layout_mode = 1
@@ -835,7 +829,7 @@ theme_override_constants/margin_bottom = 8
 
 [node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/Panel/MarginContainer"]
 layout_mode = 2
-theme_override_styles/panel = ExtResource("6_0l1wn")
+theme_override_styles/panel = ExtResource("6_0vxcv")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/Panel/MarginContainer/Panel"]
 layout_mode = 1
@@ -855,7 +849,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 value = 70.0
 fill_mode = 3
-texture_progress = ExtResource("23_g3gpu")
+texture_progress = ExtResource("23_wtxrl")
 tint_under = Color(0.66740394, 1.540184e-06, 0.403204, 1)
 tint_over = Color(0.81710166, 6.160736e-06, 0.5315976, 1)
 
@@ -865,7 +859,7 @@ offset_left = 269.0
 offset_top = 27.0
 offset_right = 313.0
 offset_bottom = 73.23729
-theme_override_styles/panel = ExtResource("5_o7vm5")
+theme_override_styles/panel = ExtResource("3_jugea")
 
 [node name="LED" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/Panel2"]
 unique_name_in_owner = true
@@ -878,10 +872,10 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("24_v0786")
+texture = ExtResource("24_41dbt")
 stretch_mode = 2
 
-[node name="Curve" parent="." node_paths=PackedStringArray("amplitude_slider", "phase_slider", "frequency_slider", "percentage_label", "selected_layer_label", "previous_layer_button", "next_layer_button", "previous_wave_type", "next_wave_type", "curve_addition_type", "selected_wave_texture_rect", "right_screen", "right_color_rect", "left_screen", "left_color_rect", "combination_add_label", "progress_bar") instance=ExtResource("16_1qimg")]
+[node name="Curve" parent="." node_paths=PackedStringArray("amplitude_slider", "phase_slider", "frequency_slider", "percentage_label", "selected_layer_label", "previous_layer_button", "next_layer_button", "previous_wave_type", "next_wave_type", "curve_addition_type", "selected_wave_texture_rect", "right_screen", "right_color_rect", "left_screen", "left_color_rect", "combination_add_label", "progress_bar") instance=ExtResource("25_nqbpc")]
 layout_mode = 1
 anchors_preset = 0
 anchor_right = 0.0
@@ -906,10 +900,11 @@ left_screen = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/R
 left_color_rect = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel/MarginContainer/Left_Screen/ColorRect")
 combination_add_label = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/MarginContainer2/Wave_Selected/MarginContainer/Panel/VBoxContainer/OperationTypeLabel")
 progress_bar = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/Panel/MarginContainer/Panel/MarginContainer/TextureProgressBar")
-sine_image = ExtResource("17_03ap5")
-square_image = ExtResource("18_kuh44")
-saw_image = ExtResource("19_bnsis")
-triangle_image = ExtResource("20_eet3d")
+sine_image = ExtResource("15_1m0l4")
+square_image = ExtResource("26_vkh7s")
+saw_image = ExtResource("27_ox62p")
+triangle_image = ExtResource("28_4g7dn")
+number_of_layers = 2
 
 [node name="Total_Timer" type="Timer" parent="."]
 wait_time = 99.0

@@ -29,9 +29,9 @@ func _process(_delta: float) -> void:
 
 			total_score += current_score
 			if current_score > 90:
-				timer.start(timer.time_left + (10))
+				timer.start(timer.time_left + (20))
 			else:
-				timer.start(timer.time_left + (5))
+				timer.start(timer.time_left + (12))
 				
 
 			can_confirm_score = false
@@ -39,9 +39,9 @@ func _process(_delta: float) -> void:
 			level += 1
 
 			if level % 10 == 0:
-				curve.target = curve.generate_random_combined(1,10)
+				curve.target = curve.generate_random_combined(3,10)
 			else:
-				curve.target = curve.generate_random_combined(1,10)
+				curve.target = curve.generate_random_combined(2,10)
 			
 			curve.recalculate_player_layers()
 			curve._refresh()

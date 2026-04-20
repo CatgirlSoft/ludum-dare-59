@@ -6,6 +6,8 @@ func _on_play_pressed() -> void:
 	get_tree().change_scene_to_packed(game)
 	pass
 
+func _on_play_2_pressed() -> void:
+	pass # Replace with function body.
 
 func _on_option_pressed() -> void:
 	$"..".change_menu(1)

@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://bd3l71r52vs8h"]
 
 [ext_resource type="Texture2D" uid="uid://dnvx7wj4bty40" path="res://[05]Assets/Art/patern.png" id="1_0dvh7"]
-[ext_resource type="Script" path="res://[02]Location/[01]Location/menu.gd" id="1_wcysk"]
-[ext_resource type="Script" path="res://[02]Location/[01]Location/sprite_2d.gd" id="2_rgne3"]
+[ext_resource type="Script" uid="uid://dbglhm2wiwnix" path="res://[02]Location/[01]Location/menu.gd" id="1_wcysk"]
+[ext_resource type="Script" uid="uid://cr7uch6vbk17d" path="res://[02]Location/[01]Location/sprite_2d.gd" id="2_rgne3"]
 [ext_resource type="Script" uid="uid://chyb34itd0v2o" path="res://[02]Location/[01]Location/start_menu.gd" id="3_rgne3"]
-[ext_resource type="Script" path="res://[02]Location/[01]Location/credit.gd" id="5_1d7ik"]
+[ext_resource type="Script" uid="uid://b7nlk3hfv6uw3" path="res://[02]Location/[01]Location/credit.gd" id="5_1d7ik"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1d7ik"]
 content_margin_left = 0.0
@@ -143,15 +143,23 @@ theme_override_constants/separation = 13
 [node name="Play" type="Button" parent="StartMenu/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 1.33
-theme_override_font_sizes/font_size = 128
-text = "Play"
+size_flags_stretch_ratio = 1.23
+theme_override_font_sizes/font_size = 96
+text = "Play: Normal"
+
+[node name="Play2" type="Button" parent="StartMenu/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.23
+theme_override_font_sizes/font_size = 96
+text = "Play: Hard"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="StartMenu/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Option" type="Button" parent="StartMenu/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 48
@@ -329,6 +337,7 @@ text = "Pecorine"
 vertical_alignment = 1
 
 [connection signal="pressed" from="StartMenu/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/Play" to="StartMenu" method="_on_play_pressed"]
+[connection signal="pressed" from="StartMenu/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/Play2" to="StartMenu" method="_on_play_pressed"]
 [connection signal="pressed" from="StartMenu/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/VBoxContainer/Option" to="StartMenu" method="_on_option_pressed"]
 [connection signal="pressed" from="StartMenu/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/VBoxContainer/Credit" to="StartMenu" method="_on_credit_pressed"]
 [connection signal="pressed" from="StartMenu/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/VBoxContainer/Quit" to="StartMenu" method="_on_quit_pressed"]
