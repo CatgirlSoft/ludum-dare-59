@@ -29,6 +29,7 @@ extends Control
 @export var left_screen: Control
 @export var left_color_rect: ColorRect
 
+@export var combination_add_label: Label
 @export var progress_bar: TextureProgressBar
 
 @export_group("Wave_Images")
@@ -283,15 +284,18 @@ func _update_ui() -> void:
 	frequency_slider.value = layer.frequency
 	phase_slider.value = layer.phase
 	_update_wave_texture(player_layers[current_layer_index].wave_type)
+	if current_layer_index < player_ops.size():
+		combination_add_label.text = CombineOp.find_key(player_ops[current_layer_index])
+	else:
+		combination_add_label.text = "UNDEFINED"
 	_update_combine_op_button()
 	
 
 func _update_combine_op_button() -> void:
 	if current_layer_index < player_ops.size():
 		combine_op_button.text = "OP:" + CombineOp.find_key(player_ops[current_layer_index])
-		combine_op_button.visible = true
-	else:
-		combine_op_button.visible = false
+		combination_add_label.text = CombineOp.find_key(player_ops[current_layer_index])
+
 
 func _save_from_ui() -> void:
 	player_layers[current_layer_index] = {
@@ -372,3 +376,5 @@ func _on_toggle_op() -> void:
 		player_ops[current_layer_index] = next
 		_update_combine_op_button()
 		_refresh()
+	else:
+		combination_add_label.text = "UNDEFINED"

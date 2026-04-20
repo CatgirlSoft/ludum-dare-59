@@ -692,12 +692,12 @@ text = "Opperation"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/Wave_Selected/MarginContainer/Panel/VBoxContainer"]
+[node name="OperationTypeLabel" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/Wave_Selected/MarginContainer/Panel/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.72156864, 0.3529412, 0.3529412, 1)
 theme_override_fonts/font = ExtResource("3_bnsis")
 theme_override_font_sizes/font_size = 25
-text = "ADDition"
+text = "Undefined"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -809,7 +809,7 @@ texture_progress = ExtResource("23_g3gpu")
 tint_under = Color(0.66740394, 1.540184e-06, 0.403204, 1)
 tint_over = Color(0.81710166, 6.160736e-06, 0.5315976, 1)
 
-[node name="Curve" parent="." node_paths=PackedStringArray("amplitude_slider", "phase_slider", "frequency_slider", "percentage_label", "previous_layer_button", "next_layer_button", "previous_wave_type", "next_wave_type", "curve_addition_type", "selected_wave_texture_rect", "right_screen", "right_color_rect", "left_screen", "left_color_rect", "progress_bar") instance=ExtResource("16_1qimg")]
+[node name="Curve" parent="." node_paths=PackedStringArray("amplitude_slider", "phase_slider", "frequency_slider", "percentage_label", "previous_layer_button", "next_layer_button", "previous_wave_type", "next_wave_type", "curve_addition_type", "selected_wave_texture_rect", "right_screen", "right_color_rect", "left_screen", "left_color_rect", "combination_add_label", "progress_bar") instance=ExtResource("16_1qimg")]
 layout_mode = 1
 anchors_preset = 0
 anchor_right = 0.0
@@ -831,6 +831,7 @@ right_screen = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/
 right_color_rect = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel2/MarginContainer/Right_Screen/ColorRect")
 left_screen = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel/MarginContainer/Left_Screen")
 left_color_rect = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Top/Panel/MarginContainer/Left_Screen/ColorRect")
+combination_add_label = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Radio_Control/Midle_Control/HBoxContainer2/Wave_Selected/MarginContainer/Panel/VBoxContainer/OperationTypeLabel")
 progress_bar = NodePath("../MarginContainer/Panel/MarginContainer/VBoxContainer/Radio_Bottom/Dialogue_Box/Panel/MarginContainer/Panel/MarginContainer/TextureProgressBar")
 sine_image = ExtResource("17_03ap5")
 square_image = ExtResource("18_kuh44")

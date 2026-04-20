@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://bd3l71r52vs8h"]
 
 [ext_resource type="Texture2D" uid="uid://dnvx7wj4bty40" path="res://[05]Assets/Art/patern.png" id="1_0dvh7"]
-[ext_resource type="Script" uid="uid://dbglhm2wiwnix" path="res://[02]Location/[01]Location/menu.gd" id="1_wcysk"]
-[ext_resource type="Script" uid="uid://cr7uch6vbk17d" path="res://[02]Location/[01]Location/sprite_2d.gd" id="2_rgne3"]
+[ext_resource type="Script" path="res://[02]Location/[01]Location/menu.gd" id="1_wcysk"]
+[ext_resource type="Script" path="res://[02]Location/[01]Location/sprite_2d.gd" id="2_rgne3"]
 [ext_resource type="Script" uid="uid://chyb34itd0v2o" path="res://[02]Location/[01]Location/start_menu.gd" id="3_rgne3"]
-[ext_resource type="Script" uid="uid://b7nlk3hfv6uw3" path="res://[02]Location/[01]Location/credit.gd" id="5_1d7ik"]
+[ext_resource type="Script" path="res://[02]Location/[01]Location/credit.gd" id="5_1d7ik"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1d7ik"]
 content_margin_left = 0.0
