@@ -15,8 +15,6 @@ var can_confirm_score: bool = false
 var target_score: float = 85.0
 var current_score: float
 
-const MENU = preload("uid://bd3l71r52vs8h")
-
 func _input(_event: InputEvent) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		last_input_timer.start(2.0)
@@ -60,11 +58,11 @@ func _on_timer_timeout()-> void:
 		$Panel/VBoxContainer/Mission_fail.visible = true
 		$Panel/VBoxContainer/bad_job.visible = true
 	if total_score == 0:
-		$Panel/VBoxContainer/score.text = "average accuracy: 00.00%"
+		$Panel/VBoxContainer/HBoxContainer/score.text = "00.00%"
 	else:
-		$Panel/VBoxContainer/score.text = "average accuracy: " + str(total_score / level).pad_decimals(2) + "%"
-	$Panel/VBoxContainer/curve_number.text = "number of curves: " + str(level) + "/10"
-	
+		$Panel/VBoxContainer/HBoxContainer/score.text = str(total_score / level).pad_decimals(2) + "%"
+	$Panel/VBoxContainer/HBoxContainer2/curve_number.text = str(level) + "/10"
+
 func _on_curve_layer_changed(layer_index: int) -> void:
 	pass
 
@@ -93,4 +91,4 @@ func _on_last_input_timer_timeout() -> void:
 # decoded message clear sound
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_packed(MENU)
+	get_tree().change_scene_to_file("res://[02]Location/[01]Location/Menu.tscn")

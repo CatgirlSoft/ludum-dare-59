@@ -972,17 +972,35 @@ theme_override_colors/font_color = Color(0.7133783, 0.762578, 0.98309714, 1)
 theme_override_font_sizes/font_size = 128
 text = "Mission Complete"
 
-[node name="score" type="Label" parent="Panel/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="label" type="Label" parent="Panel/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.7133783, 0.762578, 0.98309714, 1)
 theme_override_font_sizes/font_size = 64
 text = "average accuracy: "
 
-[node name="curve_number" type="Label" parent="Panel/VBoxContainer"]
+[node name="score" type="Label" parent="Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7133783, 0.762578, 0.98309714, 1)
+theme_override_fonts/font = ExtResource("3_bnsis")
+theme_override_font_sizes/font_size = 64
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="label" type="Label" parent="Panel/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.7133783, 0.762578, 0.98309714, 1)
 theme_override_font_sizes/font_size = 64
 text = "number of curves: "
+
+[node name="curve_number" type="Label" parent="Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7133783, 0.762578, 0.98309714, 1)
+theme_override_fonts/font = ExtResource("3_bnsis")
+theme_override_font_sizes/font_size = 64
 
 [node name="good_job" type="Label" parent="Panel/VBoxContainer"]
 visible = false

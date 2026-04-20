@@ -49,8 +49,8 @@ shadow_offset = Vector2(2, 2)
 
 [resource]
 Button/colors/font_color = Color(0.05882353, 0.05882353, 0.2627451, 1)
-Button/colors/font_focus_color = Color(0.8818128, 0.5494728, 1.92523e-07, 1)
-Button/colors/font_hover_color = Color(0.88235295, 0.54901963, 0, 1)
+Button/colors/font_focus_color = Color(0.6084866, 0.29942688, 0.2021443, 1)
+Button/colors/font_hover_color = Color(0.60784316, 0.29803923, 0.20392157, 1)
 Button/colors/font_pressed_color = Color(0, 0, 0, 1)
 Button/styles/disabled = SubResource("StyleBoxFlat_86fir")
 Button/styles/focus = SubResource("StyleBoxFlat_6ogf5")
