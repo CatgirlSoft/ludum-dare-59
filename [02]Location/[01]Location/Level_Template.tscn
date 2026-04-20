@@ -1001,3 +1001,4 @@ text = "Menu"
 [connection signal="score_changed" from="Curve" to="." method="_on_curve_score_changed"]
 [connection signal="timeout" from="Total_Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Last_Input_Timer" to="." method="_on_last_input_timer_timeout"]
+[connection signal="pressed" from="Panel/VBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]

@@ -15,6 +15,7 @@ var can_confirm_score: bool = false
 var target_score: float = 85.0
 var current_score: float
 
+const MENU = preload("uid://bd3l71r52vs8h")
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
@@ -84,10 +85,12 @@ func _on_last_input_timer_timeout() -> void:
 
 
 #TODO
-# Timer run out
 #
 #
 # SOUND
 # Button
 # static sound
 # decoded message clear sound
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_packed(MENU)
